@@ -1,0 +1,4226 @@
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+deepchem/models\chemnet_layers.py:8:1: F401 'numpy as np' imported but unused
+import numpy as np
+^
+deepchem/models\fcnet.py:50:1: W293 blank line contains whitespace
+        """Create a MultitaskClassifier.
+    
+        In addition to the following arguments, this class also accepts
+        all the keyword arguments from TensorGraph.
+    
+        Parameters
+        ----------
+        n_tasks: int
+            number of tasks
+        n_features: int
+            number of features
+        layer_sizes: list
+            the size of each dense layer in the network.  The length of
+            this list determines the number of layers.
+        weight_init_stddevs: list or float
+            the standard deviation of the distribution to use for weight
+            initialization of each layer.  The length of this list should
+            equal len(layer_sizes).  Alternatively this may be a single
+            value instead of a list, in which case the same value is used
+            for every layer.
+        bias_init_consts: list or float
+            the value to initialize the biases in each layer to.  The
+            length of this list should equal len(layer_sizes).
+            Alternatively this may be a single value instead of a list, in
+            which case the same value is used for every layer.
+        weight_decay_penalty: float
+            the magnitude of the weight decay penalty to use
+        weight_decay_penalty_type: str
+            the type of penalty to use for weight decay, either 'l1' or 'l2'
+        dropouts: list or float
+            the dropout probablity to use for each layer.  The length of this list should equal len(layer_sizes).
+            Alternatively this may be a single value instead of a list, in which case the same value is used for every layer.
+        activation_fns: list or object
+            the PyTorch activation function to apply to each layer.  The length of this list should equal
+            len(layer_sizes).  Alternatively this may be a single value instead of a list, in which case the
+            same value is used for every layer.  Standard activation functions from torch.nn.functional can be specified by name.
+        n_classes: int
+            the number of classes
+        residual: bool
+            if True, the model will be composed of pre-activation residual blocks instead
+            of a simple stack of dense layers.
+        """
+^
+deepchem/models\fcnet.py:53:1: W293 blank line contains whitespace
+        """Create a MultitaskClassifier.
+    
+        In addition to the following arguments, this class also accepts
+        all the keyword arguments from TensorGraph.
+    
+        Parameters
+        ----------
+        n_tasks: int
+            number of tasks
+        n_features: int
+            number of features
+        layer_sizes: list
+            the size of each dense layer in the network.  The length of
+            this list determines the number of layers.
+        weight_init_stddevs: list or float
+            the standard deviation of the distribution to use for weight
+            initialization of each layer.  The length of this list should
+            equal len(layer_sizes).  Alternatively this may be a single
+            value instead of a list, in which case the same value is used
+            for every layer.
+        bias_init_consts: list or float
+            the value to initialize the biases in each layer to.  The
+            length of this list should equal len(layer_sizes).
+            Alternatively this may be a single value instead of a list, in
+            which case the same value is used for every layer.
+        weight_decay_penalty: float
+            the magnitude of the weight decay penalty to use
+        weight_decay_penalty_type: str
+            the type of penalty to use for weight decay, either 'l1' or 'l2'
+        dropouts: list or float
+            the dropout probablity to use for each layer.  The length of this list should equal len(layer_sizes).
+            Alternatively this may be a single value instead of a list, in which case the same value is used for every layer.
+        activation_fns: list or object
+            the PyTorch activation function to apply to each layer.  The length of this list should equal
+            len(layer_sizes).  Alternatively this may be a single value instead of a list, in which case the
+            same value is used for every layer.  Standard activation functions from torch.nn.functional can be specified by name.
+        n_classes: int
+            the number of classes
+        residual: bool
+            if True, the model will be composed of pre-activation residual blocks instead
+            of a simple stack of dense layers.
+        """
+^
+deepchem/models\fcnet.py:156:17: E731 do not assign a lambda expression, use a def
+                regularization_loss = lambda: weight_decay_penalty * torch.sum(
+                ^
+deepchem/models\fcnet.py:159:17: E731 do not assign a lambda expression, use a def
+                regularization_loss = lambda: weight_decay_penalty * torch.sum(
+                ^
+deepchem/models\fcnet.py:217:1: W293 blank line contains whitespace
+        """Create a MultitaskRegressor.
+    
+        In addition to the following arguments, this class also accepts all the keywork arguments
+        from TensorGraph.
+    
+        Parameters
+        ----------
+        n_tasks: int
+            number of tasks
+        n_features: int
+            number of features
+        layer_sizes: list
+            the size of each dense layer in the network.  The length of this list determines the number of layers.
+        weight_init_stddevs: list or float
+            the standard deviation of the distribution to use for weight initialization of each layer.  The length
+            of this list should equal len(layer_sizes)+1.  The final element corresponds to the output layer.
+            Alternatively this may be a single value instead of a list, in which case the same value is used for every layer.
+        bias_init_consts: list or float
+            the value to initialize the biases in each layer to.  The length of this list should equal len(layer_sizes)+1.
+            The final element corresponds to the output layer.  Alternatively this may be a single value instead of a list,
+            in which case the same value is used for every layer.
+        weight_decay_penalty: float
+            the magnitude of the weight decay penalty to use
+        weight_decay_penalty_type: str
+            the type of penalty to use for weight decay, either 'l1' or 'l2'
+        dropouts: list or float
+            the dropout probablity to use for each layer.  The length of this list should equal len(layer_sizes).
+            Alternatively this may be a single value instead of a list, in which case the same value is used for every layer.
+        activation_fns: list or object
+            the PyTorch activation function to apply to each layer.  The length of this list should equal
+            len(layer_sizes).  Alternatively this may be a single value instead of a list, in which case the
+            same value is used for every layer.  Standard activation functions from torch.nn.functional can be specified by name.
+        uncertainty: bool
+            if True, include extra outputs and loss terms to enable the uncertainty
+            in outputs to be predicted
+        residual: bool
+            if True, the model will be composed of pre-activation residual blocks instead
+            of a simple stack of dense layers.
+        """
+^
+deepchem/models\fcnet.py:220:1: W293 blank line contains whitespace
+        """Create a MultitaskRegressor.
+    
+        In addition to the following arguments, this class also accepts all the keywork arguments
+        from TensorGraph.
+    
+        Parameters
+        ----------
+        n_tasks: int
+            number of tasks
+        n_features: int
+            number of features
+        layer_sizes: list
+            the size of each dense layer in the network.  The length of this list determines the number of layers.
+        weight_init_stddevs: list or float
+            the standard deviation of the distribution to use for weight initialization of each layer.  The length
+            of this list should equal len(layer_sizes)+1.  The final element corresponds to the output layer.
+            Alternatively this may be a single value instead of a list, in which case the same value is used for every layer.
+        bias_init_consts: list or float
+            the value to initialize the biases in each layer to.  The length of this list should equal len(layer_sizes)+1.
+            The final element corresponds to the output layer.  Alternatively this may be a single value instead of a list,
+            in which case the same value is used for every layer.
+        weight_decay_penalty: float
+            the magnitude of the weight decay penalty to use
+        weight_decay_penalty_type: str
+            the type of penalty to use for weight decay, either 'l1' or 'l2'
+        dropouts: list or float
+            the dropout probablity to use for each layer.  The length of this list should equal len(layer_sizes).
+            Alternatively this may be a single value instead of a list, in which case the same value is used for every layer.
+        activation_fns: list or object
+            the PyTorch activation function to apply to each layer.  The length of this list should equal
+            len(layer_sizes).  Alternatively this may be a single value instead of a list, in which case the
+            same value is used for every layer.  Standard activation functions from torch.nn.functional can be specified by name.
+        uncertainty: bool
+            if True, include extra outputs and loss terms to enable the uncertainty
+            in outputs to be predicted
+        residual: bool
+            if True, the model will be composed of pre-activation residual blocks instead
+            of a simple stack of dense layers.
+        """
+^
+deepchem/models\fcnet.py:334:17: E731 do not assign a lambda expression, use a def
+                regularization_loss = lambda: weight_decay_penalty * torch.sum(
+                ^
+deepchem/models\fcnet.py:337:17: E731 do not assign a lambda expression, use a def
+                regularization_loss = lambda: weight_decay_penalty * torch.sum(
+                ^
+deepchem/models\fcnet.py:424:1: W293 blank line contains whitespace
+        """Create a MultitaskFitTransformRegressor.
+    
+        In addition to the following arguments, this class also accepts all the keywork arguments
+        from MultitaskRegressor.
+    
+        Parameters
+        ----------
+        n_tasks: int
+            number of tasks
+        n_features: list or int
+            number of features
+        fit_transformers: list
+            List of dc.trans.FitTransformer objects
+        """
+^
+deepchem/models\fcnet.py:427:1: W293 blank line contains whitespace
+        """Create a MultitaskFitTransformRegressor.
+    
+        In addition to the following arguments, this class also accepts all the keywork arguments
+        from MultitaskRegressor.
+    
+        Parameters
+        ----------
+        n_tasks: int
+            number of tasks
+        n_features: list or int
+            number of features
+        fit_transformers: list
+            List of dc.trans.FitTransformer objects
+        """
+^
+deepchem/models\gan.py:3:1: F401 'deepchem.models.losses' imported but unused
+from deepchem.models import KerasModel, layers, losses
+^
+deepchem/models\gan.py:5:1: F401 'collections.abc.Sequence' imported but unused
+from collections.abc import Sequence
+^
+deepchem/models\graph_models.py:9:1: F401 'deepchem.data.NumpyDataset' imported but unused
+from deepchem.data import Dataset, NumpyDataset, pad_features
+^
+deepchem/models\graph_models.py:10:1: F401 'deepchem.feat.graph_features.ConvMolFeaturizer' imported but unused
+from deepchem.feat.graph_features import ConvMolFeaturizer
+^
+deepchem/models\graph_models.py:15:1: F401 'deepchem.trans.undo_transforms' imported but unused
+from deepchem.trans import undo_transforms
+^
+deepchem/models\graph_models.py:347:13: F841 local variable 'N_pairs' is assigned to but never used
+            N_pairs = pair_edges[1]
+            ^
+deepchem/models\graph_models.py:732:26: E262 inline comment should start with '# '
+                n_atoms  #, dropout_switch
+                         ^
+deepchem/models\graph_models.py:1253:1: E266 too many leading '#' for block comment
+#################### Deprecation warnings for renamed TensorGraph models ####################
+^
+deepchem/models\graph_models.py:1255:1: E402 module level import not at top of file
+import warnings
+^
+deepchem/models\IRV.py:1:1: F401 'logging' imported but unused
+import logging
+^
+deepchem/models\IRV.py:7:1: F401 'deepchem.trans.undo_transforms' imported but unused
+from deepchem.trans import undo_transforms
+^
+deepchem/models\IRV.py:135:9: F821 undefined name 'warnings'
+        warnings.warn(
+        ^
+deepchem/models\layers.py:1505:9: F841 local variable 'Z' is assigned to but never used
+        Z = inputs[1]
+        ^
+deepchem/models\layers.py:2106:55: E231 missing whitespace after ','
+            tmp_tensor.append(tf.reshape(subspaces[row,], [-1, subspace_size]))
+                                                      ^
+deepchem/models\layers.py:2552:29: E711 comparison to None should be 'if cond is None:'
+        if B.get_shape()[1] == None:
+                            ^
+deepchem/models\layers.py:3033:13: F401 'tensorflow_probability as tfp' imported but unused
+            import tensorflow_probability as tfp
+            ^
+deepchem/models\molgan.py:52:70: W291 trailing whitespace
+    """
+    Model for de-novo generation of small molecules based on work of Nicola De Cao et al. [1]_.
+    Utilizes WGAN infrastructure; uses adjacency matrix and node features as inputs.
+    Inputs need to be one-hot representation.
+
+    Examples
+    --------
+    >>>
+    >> import deepchem as dc
+    >> from deepchem.models import BasicMolGANModel as MolGAN
+    >> from deepchem.models.optimizers import ExponentialDecay
+    >> from tensorflow import one_hot
+    >> smiles = ['CCC', 'C1=CC=CC=C1', 'CNC' ]
+    >> # create featurizer
+    >> feat = dc.feat.MolGanFeaturizer()
+    >> # featurize molecules
+    >> features = feat.featurize(smiles)
+    >> # Remove empty objects
+    >> features = list(filter(lambda x: x is not None, features))
+    >> # create model
+    >> gan = MolGAN(learning_rate=ExponentialDecay(0.001, 0.9, 5000))
+    >> dataset = dc.data.NumpyDataset([x.adjacency_matrix for x in features],[x.node_features for x in features])
+    >> def iterbatches(epochs):
+    >>     for i in range(epochs):
+    >>         for batch in dataset.iterbatches(batch_size=gan.batch_size, pad_batches=True):
+    >>             adjacency_tensor = one_hot(batch[0], gan.edges)
+    >>             node_tensor = one_hot(batch[1], gan.nodes)
+    >>             yield {gan.data_inputs[0]: adjacency_tensor, gan.data_inputs[1]:node_tensor}
+    >> gan.fit_gan(iterbatches(8), generator_steps=0.2, checkpoint_interval=5000)
+    >> generated_data = gan.predict_gan_generator(1000)
+    >> # convert graphs to RDKitmolecules
+    >> nmols = feat.defeaturize(generated_data)
+    >> print("{} molecules generated".format(len(nmols)))
+    >> # remove invalid moles
+    >> nmols = list(filter(lambda x: x is not None, nmols))
+    >> # currently training is unstable so 0 is a common outcome
+    >> print ("{} valid molecules".format(len(nmols)))
+
+    References
+    ----------
+    .. [1] Nicola De Cao et al. "MolGAN: An implicit generative model 
+        for small molecular graphs", https://arxiv.org/abs/1805.11973
+    """
+       
+                                                             ^
+deepchem/models\multitask.py:5:1: F401 'sklearn' imported but unused
+import sklearn
+^
+deepchem/models\multitask.py:6:1: F401 'tempfile' imported but unused
+import tempfile
+^
+deepchem/models\multitask.py:67:9: E265 block comment should start with '# '
+        #task_metadata_rows = {task: [] for task in tasks}
+        ^
+deepchem/models\multitask.py:70:13: F841 local variable 'basename' is assigned to but never used
+            basename = "dataset-%d" % shard_num
+            ^
+deepchem/models\multitask.py:95:1: W293 blank line contains whitespace
+        """Updates all singletask models with new information.
+    
+        Note
+        ----
+        This current implementation is only functional for sklearn models.
+        """
+^
+deepchem/models\multitask.py:113:9: F841 local variable 'n_tasks' is assigned to but never used
+        n_tasks = len(self.tasks)
+        ^
+deepchem/models\multitask.py:114:9: F841 local variable 'n_samples' is assigned to but never used
+        n_samples = X.shape[0]
+        ^
+deepchem/models\multitask.py:126:9: F841 local variable 'n_tasks' is assigned to but never used
+        n_tasks = len(self.tasks)
+        ^
+deepchem/models\multitask.py:127:9: F841 local variable 'n_samples' is assigned to but never used
+        n_samples = len(dataset)
+        ^
+deepchem/models\multitask.py:140:1: W293 blank line contains whitespace
+        """Save all models
+    
+        TODO(rbharath): Saving is not yet supported for this model.
+        """
+^
+deepchem/models\normalizing_flows.py:5:1: F401 'numpy as np' imported but unused
+import numpy as np
+^
+deepchem/models\normalizing_flows.py:7:1: F401 'typing.Iterable' imported but unused
+from typing import List, Iterable, Optional, Tuple, Sequence, Any, Callable
+^
+deepchem/models\normalizing_flows.py:7:1: F401 'typing.Tuple' imported but unused
+from typing import List, Iterable, Optional, Tuple, Sequence, Any, Callable
+^
+deepchem/models\normalizing_flows.py:7:1: F401 'typing.Any' imported but unused
+from typing import List, Iterable, Optional, Tuple, Sequence, Any, Callable
+^
+deepchem/models\normalizing_flows.py:10:1: F401 'tensorflow.keras.layers.Lambda' imported but unused
+from tensorflow.keras.layers import Lambda
+^
+deepchem/models\normalizing_flows.py:12:1: F401 'deepchem as dc' imported but unused
+import deepchem as dc
+^
+deepchem/models\normalizing_flows.py:13:1: F401 'deepchem.models.losses.Loss' imported but unused
+from deepchem.models.losses import Loss
+^
+deepchem/models\normalizing_flows.py:14:1: F401 'deepchem.models.models.Model' imported but unused
+from deepchem.models.models import Model
+^
+deepchem/models\normalizing_flows.py:16:1: F401 'deepchem.models.optimizers.Optimizer' imported but unused
+from deepchem.models.optimizers import Optimizer, Adam
+^
+deepchem/models\normalizing_flows.py:16:1: F401 'deepchem.models.optimizers.Adam' imported but unused
+from deepchem.models.optimizers import Optimizer, Adam
+^
+deepchem/models\normalizing_flows.py:28:74: W291 trailing whitespace
+    """Base class for normalizing flow.
+
+    The purpose of a normalizing flow is to map a simple distribution (that is
+    easy to sample from and evaluate probability densities for) to a more
+    complex distribution that is learned from data. The base distribution 
+    p(x) is transformed by the associated normalizing flow y=g(x) to model the
+    distribution p(y).
+
+    Normalizing flows combine the advantages of autoregressive models
+    (which provide likelihood estimation but do not learn features) and
+    variational autoencoders (which learn feature representations but
+    do not provide marginal likelihoods).
+
+    """
+                                       
+
+                                ^
+deepchem/models\normalizing_flows.py:42:1: W293 blank line contains whitespace
+        """Create a new NormalizingFlow.
+    
+        Parameters
+        ----------
+        base_distribution: tfd.Distribution
+            Probability distribution to be transformed.
+            Typically an N dimensional multivariate Gaussian.
+        flow_layers: Sequence[tfb.Bijector]
+            An iterable of bijectors that comprise the flow.
+        **kwargs
+    
+        """
+^
+deepchem/models\normalizing_flows.py:51:1: W293 blank line contains whitespace
+        """Create a new NormalizingFlow.
+    
+        Parameters
+        ----------
+        base_distribution: tfd.Distribution
+            Probability distribution to be transformed.
+            Typically an N dimensional multivariate Gaussian.
+        flow_layers: Sequence[tfb.Bijector]
+            An iterable of bijectors that comprise the flow.
+        **kwargs
+    
+        """
+^
+deepchem/models\normalizing_flows.py:81:66: W291 trailing whitespace
+    """A base distribution and normalizing flow for applying transformations.
+
+    Normalizing flows are effective for any application requiring 
+    a probabilistic model that can both sample from a distribution and
+    compute marginal likelihoods, e.g. generative modeling,
+    unsupervised learning, or probabilistic inference. For a thorough review
+    of normalizing flows, see [1]_.
+
+    A distribution implements two main operations:
+        1. Sampling from the transformed distribution
+        2. Calculating log probabilities
+
+    A normalizing flow implements three main operations:
+        1. Forward transformation 
+        2. Inverse transformation 
+        3. Calculating the Jacobian
+
+    Deep Normalizing Flow models require normalizing flow layers where
+    input and output dimensions are the same, the transformation is invertible,
+    and the determinant of the Jacobian is efficient to compute and
+    differentiable. The determinant of the Jacobian of the transformation 
+    gives a factor that preserves the probability volume to 1 when transforming
+    between probability densities of different random variables.
+
+    References
+    ----------
+    .. [1] Papamakarios, George et al. "Normalizing Flows for Probabilistic Modeling and Inference." (2019). https://arxiv.org/abs/1912.02762.
+
+    """
+                                                                 ^
+deepchem/models\normalizing_flows.py:92:34: W291 trailing whitespace
+    """A base distribution and normalizing flow for applying transformations.
+
+    Normalizing flows are effective for any application requiring 
+    a probabilistic model that can both sample from a distribution and
+    compute marginal likelihoods, e.g. generative modeling,
+    unsupervised learning, or probabilistic inference. For a thorough review
+    of normalizing flows, see [1]_.
+
+    A distribution implements two main operations:
+        1. Sampling from the transformed distribution
+        2. Calculating log probabilities
+
+    A normalizing flow implements three main operations:
+        1. Forward transformation 
+        2. Inverse transformation 
+        3. Calculating the Jacobian
+
+    Deep Normalizing Flow models require normalizing flow layers where
+    input and output dimensions are the same, the transformation is invertible,
+    and the determinant of the Jacobian is efficient to compute and
+    differentiable. The determinant of the Jacobian of the transformation 
+    gives a factor that preserves the probability volume to 1 when transforming
+    between probability densities of different random variables.
+
+    References
+    ----------
+    .. [1] Papamakarios, George et al. "Normalizing Flows for Probabilistic Modeling and Inference." (2019). https://arxiv.org/abs/1912.02762.
+
+    """
+                                 ^
+deepchem/models\normalizing_flows.py:93:34: W291 trailing whitespace
+    """A base distribution and normalizing flow for applying transformations.
+
+    Normalizing flows are effective for any application requiring 
+    a probabilistic model that can both sample from a distribution and
+    compute marginal likelihoods, e.g. generative modeling,
+    unsupervised learning, or probabilistic inference. For a thorough review
+    of normalizing flows, see [1]_.
+
+    A distribution implements two main operations:
+        1. Sampling from the transformed distribution
+        2. Calculating log probabilities
+
+    A normalizing flow implements three main operations:
+        1. Forward transformation 
+        2. Inverse transformation 
+        3. Calculating the Jacobian
+
+    Deep Normalizing Flow models require normalizing flow layers where
+    input and output dimensions are the same, the transformation is invertible,
+    and the determinant of the Jacobian is efficient to compute and
+    differentiable. The determinant of the Jacobian of the transformation 
+    gives a factor that preserves the probability volume to 1 when transforming
+    between probability densities of different random variables.
+
+    References
+    ----------
+    .. [1] Papamakarios, George et al. "Normalizing Flows for Probabilistic Modeling and Inference." (2019). https://arxiv.org/abs/1912.02762.
+
+    """
+                                 ^
+deepchem/models\normalizing_flows.py:99:74: W291 trailing whitespace
+    """A base distribution and normalizing flow for applying transformations.
+
+    Normalizing flows are effective for any application requiring 
+    a probabilistic model that can both sample from a distribution and
+    compute marginal likelihoods, e.g. generative modeling,
+    unsupervised learning, or probabilistic inference. For a thorough review
+    of normalizing flows, see [1]_.
+
+    A distribution implements two main operations:
+        1. Sampling from the transformed distribution
+        2. Calculating log probabilities
+
+    A normalizing flow implements three main operations:
+        1. Forward transformation 
+        2. Inverse transformation 
+        3. Calculating the Jacobian
+
+    Deep Normalizing Flow models require normalizing flow layers where
+    input and output dimensions are the same, the transformation is invertible,
+    and the determinant of the Jacobian is efficient to compute and
+    differentiable. The determinant of the Jacobian of the transformation 
+    gives a factor that preserves the probability volume to 1 when transforming
+    between probability densities of different random variables.
+
+    References
+    ----------
+    .. [1] Papamakarios, George et al. "Normalizing Flows for Probabilistic Modeling and Inference." (2019). https://arxiv.org/abs/1912.02762.
+
+    """
+                                                                         ^
+deepchem/models\normalizing_flows.py:111:1: W293 blank line contains whitespace
+        """Creates a new NormalizingFlowModel.
+    
+        In addition to the following arguments, this class also accepts all the keyword arguments from KerasModel.
+    
+        Parameters
+        ----------
+        model: NormalizingFlow
+            An instance of NormalizingFlow.    
+    
+        Examples
+        --------
+        >> import tensorflow_probability as tfp
+        >> tfd = tfp.distributions
+        >> tfb = tfp.bijectors
+        >> flow_layers = [
+        ..    tfb.RealNVP(
+        ..        num_masked=2,
+        ..        shift_and_log_scale_fn=tfb.real_nvp_default_template(
+        ..            hidden_layers=[8, 8]))
+        ..]
+        >> base_distribution = tfd.MultivariateNormalDiag(loc=[0., 0., 0.])
+        >> nf = NormalizingFlow(base_distribution, flow_layers)
+        >> nfm = NormalizingFlowModel(nf)
+        >> dataset = NumpyDataset(
+        ..    X=np.random.rand(5, 3).astype(np.float32),
+        ..    y=np.random.rand(5,),
+        ..    ids=np.arange(5))
+        >> nfm.fit(dataset)
+    
+        """
+^
+deepchem/models\normalizing_flows.py:113:1: W293 blank line contains whitespace
+        """Creates a new NormalizingFlowModel.
+    
+        In addition to the following arguments, this class also accepts all the keyword arguments from KerasModel.
+    
+        Parameters
+        ----------
+        model: NormalizingFlow
+            An instance of NormalizingFlow.    
+    
+        Examples
+        --------
+        >> import tensorflow_probability as tfp
+        >> tfd = tfp.distributions
+        >> tfb = tfp.bijectors
+        >> flow_layers = [
+        ..    tfb.RealNVP(
+        ..        num_masked=2,
+        ..        shift_and_log_scale_fn=tfb.real_nvp_default_template(
+        ..            hidden_layers=[8, 8]))
+        ..]
+        >> base_distribution = tfd.MultivariateNormalDiag(loc=[0., 0., 0.])
+        >> nf = NormalizingFlow(base_distribution, flow_layers)
+        >> nfm = NormalizingFlowModel(nf)
+        >> dataset = NumpyDataset(
+        ..    X=np.random.rand(5, 3).astype(np.float32),
+        ..    y=np.random.rand(5,),
+        ..    ids=np.arange(5))
+        >> nfm.fit(dataset)
+    
+        """
+^
+deepchem/models\normalizing_flows.py:117:44: W291 trailing whitespace
+        """Creates a new NormalizingFlowModel.
+    
+        In addition to the following arguments, this class also accepts all the keyword arguments from KerasModel.
+    
+        Parameters
+        ----------
+        model: NormalizingFlow
+            An instance of NormalizingFlow.    
+    
+        Examples
+        --------
+        >> import tensorflow_probability as tfp
+        >> tfd = tfp.distributions
+        >> tfb = tfp.bijectors
+        >> flow_layers = [
+        ..    tfb.RealNVP(
+        ..        num_masked=2,
+        ..        shift_and_log_scale_fn=tfb.real_nvp_default_template(
+        ..            hidden_layers=[8, 8]))
+        ..]
+        >> base_distribution = tfd.MultivariateNormalDiag(loc=[0., 0., 0.])
+        >> nf = NormalizingFlow(base_distribution, flow_layers)
+        >> nfm = NormalizingFlowModel(nf)
+        >> dataset = NumpyDataset(
+        ..    X=np.random.rand(5, 3).astype(np.float32),
+        ..    y=np.random.rand(5,),
+        ..    ids=np.arange(5))
+        >> nfm.fit(dataset)
+    
+        """
+                                           ^
+deepchem/models\normalizing_flows.py:118:1: W293 blank line contains whitespace
+        """Creates a new NormalizingFlowModel.
+    
+        In addition to the following arguments, this class also accepts all the keyword arguments from KerasModel.
+    
+        Parameters
+        ----------
+        model: NormalizingFlow
+            An instance of NormalizingFlow.    
+    
+        Examples
+        --------
+        >> import tensorflow_probability as tfp
+        >> tfd = tfp.distributions
+        >> tfb = tfp.bijectors
+        >> flow_layers = [
+        ..    tfb.RealNVP(
+        ..        num_masked=2,
+        ..        shift_and_log_scale_fn=tfb.real_nvp_default_template(
+        ..            hidden_layers=[8, 8]))
+        ..]
+        >> base_distribution = tfd.MultivariateNormalDiag(loc=[0., 0., 0.])
+        >> nf = NormalizingFlow(base_distribution, flow_layers)
+        >> nfm = NormalizingFlowModel(nf)
+        >> dataset = NumpyDataset(
+        ..    X=np.random.rand(5, 3).astype(np.float32),
+        ..    y=np.random.rand(5,),
+        ..    ids=np.arange(5))
+        >> nfm.fit(dataset)
+    
+        """
+^
+deepchem/models\normalizing_flows.py:138:1: W293 blank line contains whitespace
+        """Creates a new NormalizingFlowModel.
+    
+        In addition to the following arguments, this class also accepts all the keyword arguments from KerasModel.
+    
+        Parameters
+        ----------
+        model: NormalizingFlow
+            An instance of NormalizingFlow.    
+    
+        Examples
+        --------
+        >> import tensorflow_probability as tfp
+        >> tfd = tfp.distributions
+        >> tfb = tfp.bijectors
+        >> flow_layers = [
+        ..    tfb.RealNVP(
+        ..        num_masked=2,
+        ..        shift_and_log_scale_fn=tfb.real_nvp_default_template(
+        ..            hidden_layers=[8, 8]))
+        ..]
+        >> base_distribution = tfd.MultivariateNormalDiag(loc=[0., 0., 0.])
+        >> nf = NormalizingFlow(base_distribution, flow_layers)
+        >> nfm = NormalizingFlowModel(nf)
+        >> dataset = NumpyDataset(
+        ..    X=np.random.rand(5, 3).astype(np.float32),
+        ..    y=np.random.rand(5,),
+        ..    ids=np.arange(5))
+        >> nfm.fit(dataset)
+    
+        """
+^
+deepchem/models\normalizing_flows.py:143:13: F841 local variable 'tfd' is assigned to but never used
+            tfd = tfp.distributions
+            ^
+deepchem/models\normalizing_flows.py:144:13: F841 local variable 'tfb' is assigned to but never used
+            tfb = tfp.bijectors
+            ^
+deepchem/models\normalizing_flows.py:163:1: W293 blank line contains whitespace
+        """Create the negative log likelihood loss function.
+    
+        The default implementation is appropriate for most cases. Subclasses can
+        override this if there is a need to customize it.
+    
+        Parameters
+        ----------
+        input: OneOrMany[tf.Tensor]
+            A batch of data.
+    
+        Returns
+        -------
+        A Tensor equal to the loss function to use for optimization.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:166:1: W293 blank line contains whitespace
+        """Create the negative log likelihood loss function.
+    
+        The default implementation is appropriate for most cases. Subclasses can
+        override this if there is a need to customize it.
+    
+        Parameters
+        ----------
+        input: OneOrMany[tf.Tensor]
+            A batch of data.
+    
+        Returns
+        -------
+        A Tensor equal to the loss function to use for optimization.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:171:1: W293 blank line contains whitespace
+        """Create the negative log likelihood loss function.
+    
+        The default implementation is appropriate for most cases. Subclasses can
+        override this if there is a need to customize it.
+    
+        Parameters
+        ----------
+        input: OneOrMany[tf.Tensor]
+            A batch of data.
+    
+        Returns
+        -------
+        A Tensor equal to the loss function to use for optimization.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:175:1: W293 blank line contains whitespace
+        """Create the negative log likelihood loss function.
+    
+        The default implementation is appropriate for most cases. Subclasses can
+        override this if there is a need to customize it.
+    
+        Parameters
+        ----------
+        input: OneOrMany[tf.Tensor]
+            A batch of data.
+    
+        Returns
+        -------
+        A Tensor equal to the loss function to use for optimization.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:191:1: W293 blank line contains whitespace
+        """Create a function that computes gradients and applies them to the model.
+    
+        Because of the way TensorFlow function tracing works, we need to create a
+        separate function for each new set of variables.
+        
+        Parameters
+        ----------
+        variables: Optional[List[tf.Variable]]
+            Variables to track during training.
+    
+        Returns
+        -------
+        Callable function that applies gradients for batch of training data.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:194:1: W293 blank line contains whitespace
+        """Create a function that computes gradients and applies them to the model.
+    
+        Because of the way TensorFlow function tracing works, we need to create a
+        separate function for each new set of variables.
+        
+        Parameters
+        ----------
+        variables: Optional[List[tf.Variable]]
+            Variables to track during training.
+    
+        Returns
+        -------
+        Callable function that applies gradients for batch of training data.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:199:1: W293 blank line contains whitespace
+        """Create a function that computes gradients and applies them to the model.
+    
+        Because of the way TensorFlow function tracing works, we need to create a
+        separate function for each new set of variables.
+        
+        Parameters
+        ----------
+        variables: Optional[List[tf.Variable]]
+            Variables to track during training.
+    
+        Returns
+        -------
+        Callable function that applies gradients for batch of training data.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:203:1: W293 blank line contains whitespace
+        """Create a function that computes gradients and applies them to the model.
+    
+        Because of the way TensorFlow function tracing works, we need to create a
+        separate function for each new set of variables.
+        
+        Parameters
+        ----------
+        variables: Optional[List[tf.Variable]]
+            Variables to track during training.
+    
+        Returns
+        -------
+        Callable function that applies gradients for batch of training data.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:236:72: W291 trailing whitespace
+    """Base class for normalizing flow layers.
+
+    This is an abstract base class for implementing new normalizing flow
+    layers that are not available in tfb. It should not be called directly.
+
+    A normalizing flow transforms random variables into new random variables.
+    Each learnable layer is a bijection, an invertible
+    transformation between two probability distributions. A simple initial
+    density is pushed through the normalizing flow to produce a richer, 
+    more multi-modal distribution. Normalizing flows have three main operations:
+
+    1. Forward
+        Transform a distribution. Useful for generating new samples.
+    2. Inverse
+        Reverse a transformation, useful for computing conditional probabilities.
+    3. Log(|det(Jacobian)|) [LDJ]
+        Compute the determinant of the Jacobian of the transformation, 
+        which is a scaling that conserves the probability "volume" to equal 1. 
+
+    For examples of customized normalizing flows applied to toy problems,
+    see [1]_.
+
+    References
+    ----------
+    .. [1] Saund, Brad. "Normalizing Flows." (2020). https://github.com/bsaund/normalizing_flows.
+
+    Notes
+    -----
+    - A sequence of normalizing flows is a normalizing flow.
+    - The Jacobian is the matrix of first-order derivatives of the transform.
+
+    """
+                                              
+
+                       ^
+deepchem/models\normalizing_flows.py:244:71: W291 trailing whitespace
+    """Base class for normalizing flow layers.
+
+    This is an abstract base class for implementing new normalizing flow
+    layers that are not available in tfb. It should not be called directly.
+
+    A normalizing flow transforms random variables into new random variables.
+    Each learnable layer is a bijection, an invertible
+    transformation between two probability distributions. A simple initial
+    density is pushed through the normalizing flow to produce a richer, 
+    more multi-modal distribution. Normalizing flows have three main operations:
+
+    1. Forward
+        Transform a distribution. Useful for generating new samples.
+    2. Inverse
+        Reverse a transformation, useful for computing conditional probabilities.
+    3. Log(|det(Jacobian)|) [LDJ]
+        Compute the determinant of the Jacobian of the transformation, 
+        which is a scaling that conserves the probability "volume" to equal 1. 
+
+    For examples of customized normalizing flows applied to toy problems,
+    see [1]_.
+
+    References
+    ----------
+    .. [1] Saund, Brad. "Normalizing Flows." (2020). https://github.com/bsaund/normalizing_flows.
+
+    Notes
+    -----
+    - A sequence of normalizing flows is a normalizing flow.
+    - The Jacobian is the matrix of first-order derivatives of the transform.
+
+    """
+                                              
+
+                      ^
+deepchem/models\normalizing_flows.py:245:79: W291 trailing whitespace
+    """Base class for normalizing flow layers.
+
+    This is an abstract base class for implementing new normalizing flow
+    layers that are not available in tfb. It should not be called directly.
+
+    A normalizing flow transforms random variables into new random variables.
+    Each learnable layer is a bijection, an invertible
+    transformation between two probability distributions. A simple initial
+    density is pushed through the normalizing flow to produce a richer, 
+    more multi-modal distribution. Normalizing flows have three main operations:
+
+    1. Forward
+        Transform a distribution. Useful for generating new samples.
+    2. Inverse
+        Reverse a transformation, useful for computing conditional probabilities.
+    3. Log(|det(Jacobian)|) [LDJ]
+        Compute the determinant of the Jacobian of the transformation, 
+        which is a scaling that conserves the probability "volume" to equal 1. 
+
+    For examples of customized normalizing flows applied to toy problems,
+    see [1]_.
+
+    References
+    ----------
+    .. [1] Saund, Brad. "Normalizing Flows." (2020). https://github.com/bsaund/normalizing_flows.
+
+    Notes
+    -----
+    - A sequence of normalizing flows is a normalizing flow.
+    - The Jacobian is the matrix of first-order derivatives of the transform.
+
+    """
+                                              
+
+                              ^
+deepchem/models\normalizing_flows.py:268:1: W293 blank line contains whitespace
+        """Forward transformation.
+    
+        x = g(y)
+    
+        Parameters
+        ----------
+        x: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        fwd_x: tf.Tensor
+            Transformed tensor.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:270:1: W293 blank line contains whitespace
+        """Forward transformation.
+    
+        x = g(y)
+    
+        Parameters
+        ----------
+        x: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        fwd_x: tf.Tensor
+            Transformed tensor.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:275:1: W293 blank line contains whitespace
+        """Forward transformation.
+    
+        x = g(y)
+    
+        Parameters
+        ----------
+        x: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        fwd_x: tf.Tensor
+            Transformed tensor.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:280:1: W293 blank line contains whitespace
+        """Forward transformation.
+    
+        x = g(y)
+    
+        Parameters
+        ----------
+        x: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        fwd_x: tf.Tensor
+            Transformed tensor.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:287:1: W293 blank line contains whitespace
+        """Inverse transformation.
+    
+        x = g^{-1}(y)
+        
+        Parameters
+        ----------
+        y: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        inv_y: tf.Tensor
+            Inverted tensor.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:289:1: W293 blank line contains whitespace
+        """Inverse transformation.
+    
+        x = g^{-1}(y)
+        
+        Parameters
+        ----------
+        y: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        inv_y: tf.Tensor
+            Inverted tensor.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:294:1: W293 blank line contains whitespace
+        """Inverse transformation.
+    
+        x = g^{-1}(y)
+        
+        Parameters
+        ----------
+        y: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        inv_y: tf.Tensor
+            Inverted tensor.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:299:1: W293 blank line contains whitespace
+        """Inverse transformation.
+    
+        x = g^{-1}(y)
+        
+        Parameters
+        ----------
+        y: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        inv_y: tf.Tensor
+            Inverted tensor.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:306:1: W293 blank line contains whitespace
+        """Log |Determinant(Jacobian(x)|
+    
+        Note x = g^{-1}(y)
+    
+        Parameters
+        ----------
+        x: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        ldj: tf.Tensor
+            Log of absolute value of determinant of Jacobian of x.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:308:1: W293 blank line contains whitespace
+        """Log |Determinant(Jacobian(x)|
+    
+        Note x = g^{-1}(y)
+    
+        Parameters
+        ----------
+        x: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        ldj: tf.Tensor
+            Log of absolute value of determinant of Jacobian of x.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:313:1: W293 blank line contains whitespace
+        """Log |Determinant(Jacobian(x)|
+    
+        Note x = g^{-1}(y)
+    
+        Parameters
+        ----------
+        x: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        ldj: tf.Tensor
+            Log of absolute value of determinant of Jacobian of x.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:318:1: W293 blank line contains whitespace
+        """Log |Determinant(Jacobian(x)|
+    
+        Note x = g^{-1}(y)
+    
+        Parameters
+        ----------
+        x: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        ldj: tf.Tensor
+            Log of absolute value of determinant of Jacobian of x.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:325:1: W293 blank line contains whitespace
+        """Inverse LDJ.
+    
+        The ILDJ = -LDJ.
+    
+        Note x = g^{-1}(y)
+    
+        Parameters
+        ----------
+        y: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        ildj: tf.Tensor
+            Log of absolute value of determinant of Jacobian of y.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:327:1: W293 blank line contains whitespace
+        """Inverse LDJ.
+    
+        The ILDJ = -LDJ.
+    
+        Note x = g^{-1}(y)
+    
+        Parameters
+        ----------
+        y: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        ildj: tf.Tensor
+            Log of absolute value of determinant of Jacobian of y.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:329:1: W293 blank line contains whitespace
+        """Inverse LDJ.
+    
+        The ILDJ = -LDJ.
+    
+        Note x = g^{-1}(y)
+    
+        Parameters
+        ----------
+        y: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        ildj: tf.Tensor
+            Log of absolute value of determinant of Jacobian of y.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:334:1: W293 blank line contains whitespace
+        """Inverse LDJ.
+    
+        The ILDJ = -LDJ.
+    
+        Note x = g^{-1}(y)
+    
+        Parameters
+        ----------
+        y: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        ildj: tf.Tensor
+            Log of absolute value of determinant of Jacobian of y.
+    
+        """
+^
+deepchem/models\normalizing_flows.py:339:1: W293 blank line contains whitespace
+        """Inverse LDJ.
+    
+        The ILDJ = -LDJ.
+    
+        Note x = g^{-1}(y)
+    
+        Parameters
+        ----------
+        y: tf.Tensor
+            Input tensor.
+    
+        Returns
+        -------
+        ildj: tf.Tensor
+            Log of absolute value of determinant of Jacobian of y.
+    
+        """
+^
+deepchem/models\optimizers.py:279:9: F401 'tensorflow as tf' imported but unused
+        import tensorflow as tf
+        ^
+deepchem/models\optimizers.py:338:9: F401 'tensorflow as tf' imported but unused
+        import tensorflow as tf
+        ^
+deepchem/models\progressive_multitask.py:1:1: F401 'time' imported but unused
+import time
+^
+deepchem/models\progressive_multitask.py:7:1: F401 'deepchem.metrics.to_one_hot' imported but unused
+from deepchem.metrics import to_one_hot
+^
+deepchem/models\progressive_multitask.py:8:1: F401 'deepchem.metrics.from_one_hot' imported but unused
+from deepchem.metrics import from_one_hot
+^
+deepchem/models\robust_multitask.py:1:1: F401 'numpy as np' imported but unused
+import numpy as np
+^
+deepchem/models\robust_multitask.py:22:30: W291 trailing whitespace
+    """Implements a neural network for robust multitasking.
+
+    The key idea of this model is to have bypass layers that feed
+    directly from features to task output. This might provide some
+    flexibility toroute around challenges in multitasking with
+    destructive interference. 
+
+    References
+    ----------
+    This technique was introduced in [1]_
+
+    .. [1] Ramsundar, Bharath, et al. "Is multitask deep learning practical for pharma?." Journal of chemical information and modeling 57.8 (2017): 2068-2076.
+
+    """
+                             ^
+deepchem/models\scscore.py:7:1: F401 'tensorflow.keras.layers.Activation' imported but unused
+from tensorflow.keras.layers import Input, Dense, Dropout, Activation, Lambda
+^
+deepchem/models\text_cnn.py:11:1: F401 'deepchem.metrics.from_one_hot' imported but unused
+from deepchem.metrics import to_one_hot, from_one_hot
+^
+deepchem/models\text_cnn.py:14:1: F401 'deepchem.trans.undo_transforms' imported but unused
+from deepchem.trans import undo_transforms
+^
+deepchem/models\text_cnn.py:59:26: W291 trailing whitespace
+    """ A Convolutional neural network on smiles strings
+
+    Reimplementation of the discriminator module in ORGAN [1]_ .
+    Originated from [2]_. 
+
+    This model applies multiple 1D convolutional filters to
+    the padded strings, then max-over-time pooling is applied on
+    all filters, extracting one feature per filter.  All
+    features are concatenated and transformed through several
+    hidden layers to form predictions.
+
+    This model is initially developed for sentence-level
+    classification tasks, with words represented as vectors. In
+    this implementation, SMILES strings are dissected into
+    characters and transformed to one-hot vectors in a similar
+    way. The model can be used for general molecular-level
+    classification or regression tasks. It is also used in the
+    ORGAN model as discriminator.
+
+    Training of the model only requires SMILES strings input,
+    all featurized datasets that include SMILES in the `ids`
+    attribute are accepted. PDBbind, QM7 and QM7b are not
+    supported. To use the model, `build_char_dict` should be
+    called first before defining the model to build character
+    dict of input dataset, example can be found in
+    examples/delaney/delaney_textcnn.py
+
+    References
+    ----------
+    .. [1]  Guimaraes, Gabriel Lima, et al. "Objective-reinforced generative adversarial networks (ORGAN) for sequence generation models." arXiv preprint arXiv:1705.10843 (2017).
+    .. [2] Kim, Yoon. "Convolutional neural networks for sentence classification." arXiv preprint arXiv:1408.5882 (2014).
+
+    """
+                         ^
+deepchem/models\text_cnn.py:280:1: E266 too many leading '#' for block comment
+#################### Deprecation warnings for renamed TensorGraph models ####################
+^
+deepchem/models\text_cnn.py:282:1: E402 module level import not at top of file
+import warnings
+^
+deepchem/models\gbdt_models\gbdt_model.py:82:1: W293 blank line contains whitespace
+        """Fits GDBT model with all data.
+    
+        First, this function splits all data into train and valid data (8:2),
+        and finds the best n_estimators. And then, we retrain all data using
+        best n_estimators * 1.25.
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            The `Dataset` to train this model on.
+        """
+^
+deepchem/models\gbdt_models\gbdt_model.py:86:1: W293 blank line contains whitespace
+        """Fits GDBT model with all data.
+    
+        First, this function splits all data into train and valid data (8:2),
+        and finds the best n_estimators. And then, we retrain all data using
+        best n_estimators * 1.25.
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            The `Dataset` to train this model on.
+        """
+^
+deepchem/models\gbdt_models\gbdt_model.py:126:1: W293 blank line contains whitespace
+        """Fits GDBT model with valid data.
+    
+        Parameters
+        ----------
+        train_dataset: Dataset
+            The `Dataset` to train this model on.
+        valid_dataset: Dataset
+            The `Dataset` to validate this model on.
+        """
+^
+deepchem/models\jax_models\tests\test_jax_model.py:189:5: E731 do not assign a lambda expression, use a def
+    criterion = lambda pred, tar, w: jnp.mean(
+    ^
+deepchem/models\jax_models\tests\test_jax_model.py:291:5: E731 do not assign a lambda expression, use a def
+    criterion = lambda pred, tar, w: jnp.mean(
+    ^
+deepchem/models\jax_models\tests\test_layers.py:2:1: F401 'deepchem as dc' imported but unused
+import deepchem as dc
+^
+deepchem/models\jax_models\tests\test_layers.py:3:1: F401 'numpy as np' imported but unused
+import numpy as np
+^
+deepchem/models\jax_models\tests\test_layers.py:8:5: F401 'jax.random' imported but unused
+    from jax import random
+    ^
+deepchem/models\jax_models\tests\test_layers.py:9:5: F401 'haiku as hk' imported but unused
+    import haiku as hk
+    ^
+deepchem/models\jax_models\tests\test_layers.py:16:5: F811 redefinition of unused 'dc' from line 2
+    import deepchem as dc
+    ^
+deepchem/models\jax_models\tests\test_layers.py:17:5: F811 redefinition of unused 'hk' from line 9
+    import haiku as hk
+    ^
+deepchem/models\jax_models\tests\test_pinn.py:8:5: F401 'optax' imported but unused
+    import optax
+    ^
+deepchem/models\sklearn_models\sklearn_model.py:96:1: W293 blank line contains whitespace
+        """Fits scikit-learn model to data.
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            The `Dataset` to train this model on.
+        """
+^
+deepchem/models\sklearn_models\sklearn_model.py:113:1: W293 blank line contains whitespace
+        """Makes predictions on batch of data.
+    
+        Parameters
+        ----------
+        X: np.ndarray
+            A numpy array of features.
+    
+        Returns
+        -------
+        np.ndarray
+            The value is a return value of `predict_proba` or `predict` method
+            of the scikit-learn model. If the scikit-learn model has both methods,
+            the value is always a return value of `predict_proba`.
+        """
+^
+deepchem/models\sklearn_models\sklearn_model.py:118:1: W293 blank line contains whitespace
+        """Makes predictions on batch of data.
+    
+        Parameters
+        ----------
+        X: np.ndarray
+            A numpy array of features.
+    
+        Returns
+        -------
+        np.ndarray
+            The value is a return value of `predict_proba` or `predict` method
+            of the scikit-learn model. If the scikit-learn model has both methods,
+            the value is always a return value of `predict_proba`.
+        """
+^
+deepchem/models\sklearn_models\sklearn_model.py:135:1: W293 blank line contains whitespace
+        """Makes predictions on dataset.
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            Dataset to make prediction on.
+        transformers: List[Transformer]
+            Transformers that the input data has been transformed by. The output
+            is passed through these transformers to undo the transformations.
+        """
+^
+deepchem/models\tests\test_api.py:10:5: F401 'torch' imported but unused
+    import torch
+    ^
+deepchem/models\tests\test_api.py:91:5: F841 local variable 'splittype' is assigned to but never used
+    splittype = "scaffold"
+    ^
+deepchem/models\tests\test_atomic_conv.py:13:5: F401 'tensorflow as tf' imported but unused
+    import tensorflow as tf
+    ^
+deepchem/models\tests\test_attentivefp.py:11:5: F401 'dgl' imported but unused
+    import dgl
+    ^
+deepchem/models\tests\test_attentivefp.py:12:5: F401 'dgllife' imported but unused
+    import dgllife
+    ^
+deepchem/models\tests\test_attentivefp.py:13:5: F401 'torch' imported but unused
+    import torch
+    ^
+deepchem/models\tests\test_cnn.py:7:5: F401 'torch' imported but unused
+    import torch
+    ^
+deepchem/models\tests\test_gan.py:3:1: F401 'unittest' imported but unused
+import unittest
+^
+deepchem/models\tests\test_gat.py:11:5: F401 'dgl' imported but unused
+    import dgl
+    ^
+deepchem/models\tests\test_gat.py:12:5: F401 'dgllife' imported but unused
+    import dgllife
+    ^
+deepchem/models\tests\test_gat.py:13:5: F401 'torch' imported but unused
+    import torch
+    ^
+deepchem/models\tests\test_gcn.py:11:5: F401 'dgl' imported but unused
+    import dgl
+    ^
+deepchem/models\tests\test_gcn.py:12:5: F401 'dgllife' imported but unused
+    import dgllife
+    ^
+deepchem/models\tests\test_gcn.py:13:5: F401 'torch' imported but unused
+    import torch
+    ^
+deepchem/models\tests\test_graph_models.py:1:1: F401 'unittest' imported but unused
+import unittest
+^
+deepchem/models\tests\test_graph_models.py:13:5: F401 'tensorflow as tf' imported but unused
+    import tensorflow as tf
+    ^
+deepchem/models\tests\test_graph_models.py:14:5: F401 'deepchem.models.WeaveModel' imported but unused
+    from deepchem.models import GraphConvModel, DAGModel, WeaveModel, MPNNModel
+    ^
+deepchem/models\tests\test_graph_models.py:175:5: F841 local variable 'y_pred1' is assigned to but never used
+    y_pred1 = model.predict(dataset)
+    ^
+deepchem/models\tests\test_graph_models.py:202:5: F811 redefinition of unused 'tf' from line 13
+    import tensorflow as tf
+    ^
+deepchem/models\tests\test_graph_models.py:225:5: F811 redefinition of unused 'tf' from line 13
+    import tensorflow as tf
+    ^
+deepchem/models\tests\test_graph_models.py:364:59: E712 comparison to True should be 'if cond is True:' or 'if cond:'
+    assert (model.predict(dc.data.NumpyDataset(X))).all() == True
+                                                          ^
+deepchem/models\tests\test_kerasmodel.py:8:5: F401 'wandb' imported but unused
+    import wandb
+    ^
+deepchem/models\tests\test_layers.py:8:5: F401 'tensorflow.python.framework.test_util' imported but unused
+    from tensorflow.python.framework import test_util
+    ^
+deepchem/models\tests\test_layers.py:124:5: F841 local variable 'out_channels' is assigned to but never used
+    out_channels = 2
+    ^
+deepchem/models\tests\test_layers.py:170:5: F841 local variable 'out_channels' is assigned to but never used
+    out_channels = 2
+    ^
+deepchem/models\tests\test_layers.py:212:5: F401 'tensorflow as tf' imported but unused
+    import tensorflow as tf
+    ^
+deepchem/models\tests\test_layers.py:214:5: F841 local variable 'out_channels' is assigned to but never used
+    out_channels = 2
+    ^
+deepchem/models\tests\test_layers.py:233:5: E265 block comment should start with '# '
+    #per_mol_features = tf.math.segment_sum(inputs[0], inputs[1])
+    ^
+deepchem/models\tests\test_layers.py:240:5: E265 block comment should start with '# '
+    #assert np.array(outputs[1]).shape == (11 * 75,)
+    ^
+deepchem/models\tests\test_layers.py:291:5: F841 local variable 'n_atoms' is assigned to but never used
+    n_atoms = 4  # In CCC and C, there are 4 atoms
+    ^
+deepchem/models\tests\test_layers.py:311:5: F841 local variable 'max_depth' is assigned to but never used
+    max_depth = 5
+    ^
+deepchem/models\tests\test_layers.py:507:5: F841 local variable 'result' is assigned to but never used
+    result = layer(input)
+    ^
+deepchem/models\tests\test_layers.py:580:5: E265 block comment should start with '# '
+    #dropout_switch = False
+    ^
+deepchem/models\tests\test_layers.py:585:5: F841 local variable 'outputs' is assigned to but never used
+    outputs = layer([
+    ^
+deepchem/models\tests\test_layers.py:591:9: E265 block comment should start with '# '
+        #dropout_switch
+        ^
+deepchem/models\tests\test_layers.py:593:5: E266 too many leading '#' for block comment
+    ## TODO(rbharath): What is the shape of outputs supposed to be?
+    ^
+deepchem/models\tests\test_layers.py:594:5: E266 too many leading '#' for block comment
+    ## I'm getting (7, 30) here. Where does 7 come from??
+    ^
+deepchem/models\tests\test_layers.py:614:5: F841 local variable 'outputs' is assigned to but never used
+    outputs = layer([atom_features, membership])
+    ^
+deepchem/models\tests\test_layers_from_config.py:1:1: F401 'os' imported but unused
+import os
+^
+deepchem/models\tests\test_layers_from_config.py:2:1: F401 'unittest' imported but unused
+import unittest
+^
+deepchem/models\tests\test_layers_from_config.py:4:1: F401 'numpy as np' imported but unused
+import numpy as np
+^
+deepchem/models\tests\test_layers_from_config.py:7:5: F401 'tensorflow as tf' imported but unused
+    import tensorflow as tf
+    ^
+deepchem/models\tests\test_layers_from_config.py:8:5: F401 'tensorflow.python.eager.context' imported but unused
+    from tensorflow.python.eager import context
+    ^
+deepchem/models\tests\test_lcnn.py:9:5: F401 'dgl' imported but unused
+    import dgl
+    ^
+deepchem/models\tests\test_lcnn.py:10:5: F401 'torch' imported but unused
+    import torch
+    ^
+deepchem/models\tests\test_molgan_model.py:9:5: F401 'tensorflow as tf' imported but unused
+    import tensorflow as tf
+    ^
+deepchem/models\tests\test_mpnn.py:11:5: F401 'dgl' imported but unused
+    import dgl
+    ^
+deepchem/models\tests\test_mpnn.py:12:5: F401 'dgllife' imported but unused
+    import dgllife
+    ^
+deepchem/models\tests\test_mpnn.py:13:5: F401 'torch' imported but unused
+    import torch
+    ^
+deepchem/models\tests\test_multitask.py:10:1: F401 'tempfile' imported but unused
+import tempfile
+^
+deepchem/models\tests\test_multitask.py:11:1: F401 'shutil' imported but unused
+import shutil
+^
+deepchem/models\tests\test_normalizing_flows.py:5:1: F401 'os' imported but unused
+import os
+^
+deepchem/models\tests\test_normalizing_flows.py:6:1: F401 'sys' imported but unused
+import sys
+^
+deepchem/models\tests\test_normalizing_flows.py:9:1: F401 'deepchem' imported but unused
+import deepchem
+^
+deepchem/models\tests\test_normalizing_flows.py:10:1: F401 'numpy as np' imported but unused
+import numpy as np
+^
+deepchem/models\tests\test_optimizers.py:25:5: F401 'jax' imported but unused
+    import jax
+    ^
+deepchem/models\tests\test_optimizers.py:26:5: F401 'optax' imported but unused
+    import optax
+    ^
+deepchem/models\tests\test_optimizers.py:54:9: F811 redefinition of unused 'optax' from line 26
+        import optax
+        ^
+deepchem/models\tests\test_optimizers.py:78:9: F811 redefinition of unused 'optax' from line 26
+        import optax
+        ^
+deepchem/models\tests\test_optimizers.py:118:9: F811 redefinition of unused 'optax' from line 26
+        import optax
+        ^
+deepchem/models\tests\test_optimizers.py:142:9: F811 redefinition of unused 'optax' from line 26
+        import optax
+        ^
+deepchem/models\tests\test_optimizers.py:166:9: F811 redefinition of unused 'optax' from line 26
+        import optax
+        ^
+deepchem/models\tests\test_optimizers.py:179:9: F841 local variable 'tfopt' is assigned to but never used
+        tfopt = opt._create_tf_optimizer(global_step)
+        ^
+deepchem/models\tests\test_optimizers.py:190:9: F841 local variable 'schedule' is assigned to but never used
+        schedule = rate._create_pytorch_schedule(torchopt)
+        ^
+deepchem/models\tests\test_optimizers.py:195:9: F811 redefinition of unused 'optax' from line 26
+        import optax
+        ^
+deepchem/models\tests\test_optimizers.py:211:9: F841 local variable 'tfopt' is assigned to but never used
+        tfopt = opt._create_tf_optimizer(global_step)
+        ^
+deepchem/models\tests\test_optimizers.py:222:9: F841 local variable 'schedule' is assigned to but never used
+        schedule = rate._create_pytorch_schedule(torchopt)
+        ^
+deepchem/models\tests\test_optimizers.py:227:9: F811 redefinition of unused 'optax' from line 26
+        import optax
+        ^
+deepchem/models\tests\test_optimizers.py:241:9: F841 local variable 'tfopt' is assigned to but never used
+        tfopt = opt._create_tf_optimizer(global_step)
+        ^
+deepchem/models\tests\test_optimizers.py:250:9: F841 local variable 'schedule' is assigned to but never used
+        schedule = rate._create_pytorch_schedule(torchopt)
+        ^
+deepchem/models\tests\test_optimizers.py:255:9: F811 redefinition of unused 'optax' from line 26
+        import optax
+        ^
+deepchem/models\tests\test_optimizers.py:264:9: F811 redefinition of unused 'optax' from line 26
+        import optax
+        ^
+deepchem/models\tests\test_overfit.py:15:5: F401 'tensorflow.python.framework.test_util' imported but unused
+    from tensorflow.python.framework import test_util
+    ^
+deepchem/models\tests\test_overfit.py:146:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_overfit.py:180:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_overfit.py:248:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_overfit.py:287:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_overfit.py:361:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_overfit.py:398:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_overfit.py:444:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_overfit.py:479:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_overfit.py:545:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_overfit.py:578:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_overfit.py:623:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_overfit.py:660:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_pagtn.py:11:5: F401 'dgl' imported but unused
+    import dgl
+    ^
+deepchem/models\tests\test_pagtn.py:12:5: F401 'dgllife' imported but unused
+    import dgllife
+    ^
+deepchem/models\tests\test_pagtn.py:13:5: F401 'torch' imported but unused
+    import torch
+    ^
+deepchem/models\tests\test_predict.py:2:59: W291 trailing whitespace
+"""
+Tests that deepchem models make deterministic predictions. 
+"""
+   
+                                                      ^
+deepchem/models\tests\test_predict.py:9:1: F401 'tempfile' imported but unused
+import tempfile
+^
+deepchem/models\tests\test_predict.py:10:1: F401 'numpy as np' imported but unused
+import numpy as np
+^
+deepchem/models\tests\test_predict.py:12:1: F401 'sklearn' imported but unused
+import sklearn
+^
+deepchem/models\tests\test_predict.py:13:1: F401 'shutil' imported but unused
+import shutil
+^
+deepchem/models\tests\test_predict.py:14:1: F401 'deepchem as dc' imported but unused
+import deepchem as dc
+^
+deepchem/models\tests\test_predict.py:17:5: F401 'tensorflow as tf' imported but unused
+    import tensorflow as tf
+    ^
+deepchem/models\tests\test_predict.py:18:5: F401 'tensorflow.python.framework.test_util' imported but unused
+    from tensorflow.python.framework import test_util
+    ^
+deepchem/models\tests\test_predict.py:19:5: F401 'sklearn.ensemble.RandomForestClassifier' imported but unused
+    from sklearn.ensemble import RandomForestClassifier
+    ^
+deepchem/models\tests\test_predict.py:20:5: F401 'sklearn.ensemble.RandomForestRegressor' imported but unused
+    from sklearn.ensemble import RandomForestRegressor
+    ^
+deepchem/models\tests\test_predict.py:28:50: W291 trailing whitespace
+    """
+  Test that models make deterministic predictions 
+
+  These tests guard against failures like having dropout turned on at
+  test time.
+  """
+       
+                                         ^
+deepchem/models\tests\test_predict.py:72:39: W291 trailing whitespace
+    '''
+  def test_tf_progressive_regression_predict(self):
+    """Test tf progressive multitask makes deterministic predictions."""
+    np.random.seed(123)
+    n_tasks = 9
+    n_samples = 10
+    n_features = 3
+    n_classes = 2
+
+    # Generate dummy dataset
+    ids = np.arange(n_samples)
+    X = np.random.rand(n_samples, n_features)
+    y = np.zeros((n_samples, n_tasks))
+    w = np.ones((n_samples, n_tasks))
+
+    dataset = dc.data.NumpyDataset(X, y, w, ids)
+
+    regression_metric = dc.metrics.Metric(
+        dc.metrics.mean_squared_error, task_averager=np.mean)
+    model = dc.models.ProgressiveMultitaskRegressor(
+        n_tasks,
+        n_features,
+        layer_sizes=[50],
+        bypass_layer_sizes=[10],
+        dropouts=[.25],
+        learning_rate=0.003,
+        weight_init_stddevs=[.1],
+        alpha_init_stddevs=[.02],
+        batch_size=n_samples)
+
+    # Fit trained model
+    model.fit(dataset, nb_epoch=25)
+    model.save()
+
+    # Check same predictions are made. 
+    y_pred_first = model.predict(dataset)
+    y_pred_second = model.predict(dataset)
+    np.testing.assert_allclose(y_pred_first, y_pred_second)
+  '''
+       
+                              ^
+deepchem/models\tests\test_pretrained_keras.py:1:1: F401 'os' imported but unused
+import os
+^
+deepchem/models\tests\test_pretrained_keras.py:6:1: F401 'deepchem.models.losses.L2Loss' imported but unused
+from deepchem.models.losses import L2Loss
+^
+deepchem/models\tests\test_pretrained_torch.py:1:1: F401 'os' imported but unused
+import os
+^
+deepchem/models\tests\test_pretrained_torch.py:6:1: F401 'deepchem.models.losses.L2Loss' imported but unused
+from deepchem.models.losses import L2Loss
+^
+deepchem/models\tests\test_pretrained_torch.py:7:1: F401 'deepchem.feat.mol_graphs.ConvMol' imported but unused
+from deepchem.feat.mol_graphs import ConvMol
+^
+deepchem/models\tests\test_reload.py:6:1: F401 'unittest' imported but unused
+import unittest
+^
+deepchem/models\tests\test_reload.py:23:5: F401 'torch' imported but unused
+    import torch
+    ^
+deepchem/models\tests\test_reload.py:132:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_reload.py:189:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_reload.py:244:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_reload.py:372:5: F841 local variable 'tfk' is assigned to but never used
+    tfk = tf.keras
+    ^
+deepchem/models\tests\test_reload.py:391:5: F841 local variable 'final' is assigned to but never used
+    final = nfm.fit(dataset, nb_epoch=1)
+    ^
+deepchem/models\tests\test_reload.py:476:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_reload.py:660:5: F841 local variable 'tasks' is assigned to but never used
+    tasks = ["outcome"]
+    ^
+deepchem/models\tests\test_reload.py:730:5: F841 local variable 'tasks' is assigned to but never used
+    tasks = ["outcome"]
+    ^
+deepchem/models\tests\test_reload.py:732:5: F841 local variable 'n_samples' is assigned to but never used
+    n_samples = len(mols)
+    ^
+deepchem/models\tests\test_reload.py:779:5: E265 block comment should start with '# '
+    #Eval model on train
+    ^
+deepchem/models\tests\test_reload.py:793:5: F841 local variable 'tasks' is assigned to but never used
+    tasks = ["outcome"]
+    ^
+deepchem/models\tests\test_reload.py:859:5: F841 local variable 'tasks' is assigned to but never used
+    tasks = ["outcome"]
+    ^
+deepchem/models\tests\test_reload.py:978:5: F841 local variable 'n_tasks' is assigned to but never used
+    n_tasks = len(tasks)
+    ^
+deepchem/models\tests\test_reload.py:980:5: F841 local variable 'n_samples' is assigned to but never used
+    n_samples = len(mols)
+    ^
+deepchem/models\tests\test_reload.py:1040:5: F841 local variable 'classsification_metric' is assigned to but never used
+    classsification_metric = dc.metrics.Metric(dc.metrics.roc_auc_score,
+    ^
+deepchem/models\tests\test_reload.py:1097:5: F841 local variable 'classsification_metric' is assigned to but never used
+    classsification_metric = dc.metrics.Metric(dc.metrics.roc_auc_score,
+    ^
+deepchem/models\tests\test_robust.py:17:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_robust.py:27:5: F841 local variable 'classification_metric' is assigned to but never used
+    classification_metric = dc.metrics.Metric(dc.metrics.accuracy_score,
+    ^
+deepchem/models\tests\test_robust.py:50:5: F841 local variable 'n_classes' is assigned to but never used
+    n_classes = 2
+    ^
+deepchem/models\tests\test_robust.py:61:5: F841 local variable 'regression_metric' is assigned to but never used
+    regression_metric = dc.metrics.Metric(dc.metrics.mean_squared_error,
+    ^
+deepchem/models\tests\test_scscore.py:9:5: F401 'tensorflow as tf' imported but unused
+    import tensorflow as tf
+    ^
+deepchem/models\tests\test_seqtoseq.py:7:5: F401 'tensorflow as tf' imported but unused
+    import tensorflow as tf
+    ^
+deepchem/models\tests\test_singletask_to_multitask.py:13:1: F401 'sklearn.linear_model.LogisticRegression' imported but unused
+from sklearn.linear_model import LogisticRegression
+^
+deepchem/models\tests\test_singletask_to_multitask.py:21:5: E265 block comment should start with '# '
+    #def test_singletask_to_multitask_classification(self):
+    ^
+deepchem/models\tests\test_textcnnmodel.py:4:5: F401 'tensorflow as tf' imported but unused
+    import tensorflow as tf
+    ^
+deepchem/models\tests\test_torch_model.py:16:5: F401 'wandb' imported but unused
+    import wandb
+    ^
+deepchem/models\tests\test_weave_models.py:1:1: F401 'unittest' imported but unused
+import unittest
+^
+deepchem/models\tests\test_weave_models.py:2:1: F401 'os' imported but unused
+import os
+^
+deepchem/models\tests\test_weave_models.py:5:1: F401 'scipy' imported but unused
+import scipy
+^
+deepchem/models\tests\test_weave_models.py:11:1: F401 'deepchem.feat.ConvMolFeaturizer' imported but unused
+from deepchem.feat import ConvMolFeaturizer
+^
+deepchem/models\tests\test_weave_models.py:13:5: F401 'tensorflow as tf' imported but unused
+    import tensorflow as tf
+    ^
+deepchem/models\tests\test_weave_models.py:14:5: F401 'deepchem.models.GraphConvModel' imported but unused
+    from deepchem.models import GraphConvModel, DAGModel, WeaveModel, MPNNModel
+    ^
+deepchem/models\tests\test_weave_models.py:14:5: F401 'deepchem.models.DAGModel' imported but unused
+    from deepchem.models import GraphConvModel, DAGModel, WeaveModel, MPNNModel
+    ^
+deepchem/models\tests\test_weave_models.py:14:5: F401 'deepchem.models.MPNNModel' imported but unused
+    from deepchem.models import GraphConvModel, DAGModel, WeaveModel, MPNNModel
+    ^
+deepchem/models\tests\test_weave_models.py:152:5: F811 redefinition of unused 'tf' from line 13
+    import tensorflow as tf
+    ^
+deepchem/models\torch_models\attentivefp.py:102:13: F401 'dgl' imported but unused
+            import dgl
+            ^
+deepchem/models\torch_models\attentivefp.py:106:13: F401 'dgllife' imported but unused
+            import dgllife
+            ^
+deepchem/models\torch_models\attentivefp.py:139:1: W293 blank line contains whitespace
+        """Predict graph labels
+    
+        Parameters
+        ----------
+        g: DGLGraph
+            A DGLGraph for a batch of graphs. It stores the node features in
+            ``dgl_graph.ndata[self.nfeat_name]`` and edge features in
+            ``dgl_graph.edata[self.efeat_name]``.
+    
+        Returns
+        -------
+        torch.Tensor
+            The model output.
+    
+        * When self.mode = 'regression',
+            its shape will be ``(dgl_graph.batch_size, self.n_tasks)``.
+        * When self.mode = 'classification', the output consists of probabilities
+            for classes. Its shape will be
+            ``(dgl_graph.batch_size, self.n_tasks, self.n_classes)`` if self.n_tasks > 1;
+            its shape will be ``(dgl_graph.batch_size, self.n_classes)`` if self.n_tasks is 1.
+        torch.Tensor, optional
+            This is only returned when self.mode = 'classification', the output consists of the
+            logits for classes before softmax.
+        """
+^
+deepchem/models\torch_models\attentivefp.py:146:1: W293 blank line contains whitespace
+        """Predict graph labels
+    
+        Parameters
+        ----------
+        g: DGLGraph
+            A DGLGraph for a batch of graphs. It stores the node features in
+            ``dgl_graph.ndata[self.nfeat_name]`` and edge features in
+            ``dgl_graph.edata[self.efeat_name]``.
+    
+        Returns
+        -------
+        torch.Tensor
+            The model output.
+    
+        * When self.mode = 'regression',
+            its shape will be ``(dgl_graph.batch_size, self.n_tasks)``.
+        * When self.mode = 'classification', the output consists of probabilities
+            for classes. Its shape will be
+            ``(dgl_graph.batch_size, self.n_tasks, self.n_classes)`` if self.n_tasks > 1;
+            its shape will be ``(dgl_graph.batch_size, self.n_classes)`` if self.n_tasks is 1.
+        torch.Tensor, optional
+            This is only returned when self.mode = 'classification', the output consists of the
+            logits for classes before softmax.
+        """
+^
+deepchem/models\torch_models\attentivefp.py:151:1: W293 blank line contains whitespace
+        """Predict graph labels
+    
+        Parameters
+        ----------
+        g: DGLGraph
+            A DGLGraph for a batch of graphs. It stores the node features in
+            ``dgl_graph.ndata[self.nfeat_name]`` and edge features in
+            ``dgl_graph.edata[self.efeat_name]``.
+    
+        Returns
+        -------
+        torch.Tensor
+            The model output.
+    
+        * When self.mode = 'regression',
+            its shape will be ``(dgl_graph.batch_size, self.n_tasks)``.
+        * When self.mode = 'classification', the output consists of probabilities
+            for classes. Its shape will be
+            ``(dgl_graph.batch_size, self.n_tasks, self.n_classes)`` if self.n_tasks > 1;
+            its shape will be ``(dgl_graph.batch_size, self.n_classes)`` if self.n_tasks is 1.
+        torch.Tensor, optional
+            This is only returned when self.mode = 'classification', the output consists of the
+            logits for classes before softmax.
+        """
+^
+deepchem/models\torch_models\attentivefp.py:285:1: W293 blank line contains whitespace
+        """Create batch data for AttentiveFP.
+    
+        Parameters
+        ----------
+        batch: tuple
+            The tuple is ``(inputs, labels, weights)``.
+    
+        Returns
+        -------
+        inputs: DGLGraph
+            DGLGraph for a batch of graphs.
+        labels: list of torch.Tensor or None
+            The graph labels.
+        weights: list of torch.Tensor or None
+            The weights for each sample or sample/task pair converted to torch.Tensor.
+        """
+^
+deepchem/models\torch_models\attentivefp.py:290:1: W293 blank line contains whitespace
+        """Create batch data for AttentiveFP.
+    
+        Parameters
+        ----------
+        batch: tuple
+            The tuple is ``(inputs, labels, weights)``.
+    
+        Returns
+        -------
+        inputs: DGLGraph
+            DGLGraph for a batch of graphs.
+        labels: list of torch.Tensor or None
+            The graph labels.
+        weights: list of torch.Tensor or None
+            The weights for each sample or sample/task pair converted to torch.Tensor.
+        """
+^
+deepchem/models\torch_models\cgcnn.py:82:1: W293 blank line contains whitespace
+        """Update node representations.
+    
+        Parameters
+        ----------
+        dgl_graph: DGLGraph
+            DGLGraph for a batch of graphs.
+        node_feats: torch.Tensor
+            The node features. The shape is `(N, hidden_node_dim)`.
+        edge_feats: torch.Tensor
+            The edge features. The shape is `(N, hidden_node_dim)`.
+    
+        Returns
+        -------
+        node_feats: torch.Tensor
+            The updated node features. The shape is `(N, hidden_node_dim)`.
+        """
+^
+deepchem/models\torch_models\cgcnn.py:91:1: W293 blank line contains whitespace
+        """Update node representations.
+    
+        Parameters
+        ----------
+        dgl_graph: DGLGraph
+            DGLGraph for a batch of graphs.
+        node_feats: torch.Tensor
+            The node features. The shape is `(N, hidden_node_dim)`.
+        edge_feats: torch.Tensor
+            The edge features. The shape is `(N, hidden_node_dim)`.
+    
+        Returns
+        -------
+        node_feats: torch.Tensor
+            The updated node features. The shape is `(N, hidden_node_dim)`.
+        """
+^
+deepchem/models\torch_models\cgcnn.py:209:1: W293 blank line contains whitespace
+        """Predict labels
+    
+        Parameters
+        ----------
+        dgl_graph: DGLGraph
+            DGLGraph for a batch of graphs. The graph expects that the node features
+            are stored in `ndata['x']`, and the edge features are stored in `edata['edge_attr']`.
+    
+        Returns
+        -------
+        out: torch.Tensor
+            The output values of this model.
+            If mode == 'regression', the shape is `(batch_size, n_tasks)`.
+            If mode == 'classification', the shape is `(batch_size, n_tasks, n_classes)` (n_tasks > 1)
+            or `(batch_size, n_classes)` (n_tasks == 1) and the output values are probabilities of each class label.
+        """
+^
+deepchem/models\torch_models\cgcnn.py:215:1: W293 blank line contains whitespace
+        """Predict labels
+    
+        Parameters
+        ----------
+        dgl_graph: DGLGraph
+            DGLGraph for a batch of graphs. The graph expects that the node features
+            are stored in `ndata['x']`, and the edge features are stored in `edata['edge_attr']`.
+    
+        Returns
+        -------
+        out: torch.Tensor
+            The output values of this model.
+            If mode == 'regression', the shape is `(batch_size, n_tasks)`.
+            If mode == 'classification', the shape is `(batch_size, n_tasks, n_classes)` (n_tasks > 1)
+            or `(batch_size, n_classes)` (n_tasks == 1) and the output values are probabilities of each class label.
+        """
+^
+deepchem/models\torch_models\cgcnn.py:298:1: W293 blank line contains whitespace
+        """This class accepts all the keyword arguments from TorchModel.
+    
+        Parameters
+        ----------
+        in_node_dim: int, default 92
+            The length of the initial node feature vectors. The 92 is
+            based on length of vectors in the atom_init.json.
+        hidden_node_dim: int, default 64
+            The length of the hidden node feature vectors.
+        in_edge_dim: int, default 41
+            The length of the initial edge feature vectors. The 41 is
+            based on default setting of CGCNNFeaturizer.
+        num_conv: int, default 3
+            The number of convolutional layers.
+        predictor_hidden_feats: int, default 128
+            The size for hidden representations in the output MLP predictor.
+        n_tasks: int, default 1
+            The number of the output size.
+        mode: str, default 'regression'
+            The model type, 'classification' or 'regression'.
+        n_classes: int, default 2
+            The number of classes to predict (only used in classification mode).
+        kwargs: Dict
+            This class accepts all the keyword arguments from TorchModel.
+        """
+^
+deepchem/models\torch_models\cgcnn.py:337:1: W293 blank line contains whitespace
+        """Create batch data for CGCNN.
+    
+        Parameters
+        ----------
+        batch: Tuple
+            The tuple are `(inputs, labels, weights)`.
+    
+        Returns
+        -------
+        inputs: DGLGraph
+            DGLGraph for a batch of graphs.
+        labels: List[torch.Tensor] or None
+            The labels converted to torch.Tensor
+        weights: List[torch.Tensor] or None
+            The weights for each sample or sample/task pair converted to torch.Tensor
+        """
+^
+deepchem/models\torch_models\cgcnn.py:342:1: W293 blank line contains whitespace
+        """Create batch data for CGCNN.
+    
+        Parameters
+        ----------
+        batch: Tuple
+            The tuple are `(inputs, labels, weights)`.
+    
+        Returns
+        -------
+        inputs: DGLGraph
+            DGLGraph for a batch of graphs.
+        labels: List[torch.Tensor] or None
+            The labels converted to torch.Tensor
+        weights: List[torch.Tensor] or None
+            The weights for each sample or sample/task pair converted to torch.Tensor
+        """
+^
+deepchem/models\torch_models\cnn.py:3:1: F401 'deepchem as dc' imported but unused
+import deepchem as dc
+^
+deepchem/models\torch_models\cnn.py:152:17: E731 do not assign a lambda expression, use a def
+                regularization_loss = lambda: weight_decay_penalty * torch.sum(
+                ^
+deepchem/models\torch_models\cnn.py:155:17: E731 do not assign a lambda expression, use a def
+                regularization_loss = lambda: weight_decay_penalty * torch.sum(
+                ^
+deepchem/models\torch_models\dmpnn.py:194:1: W293 blank line contains whitespace
+        """
+        Generate mapping, which maps bond index to 'array of indices of the bonds'
+        incoming at the initial atom of the bond (reverse bonds are not considered).
+    
+        Steps:
+        - Get mapping based on `self.atom_to_incoming_bonds` and `self.bond_to_ini_atom`.
+        - Replace reverse bond indices with -1.
+        - Pad the mapping with -1.
+        """
+^
+deepchem/models\torch_models\dmpnn.py:305:1: W293 blank line contains whitespace
+        """Initialize the DMPNN class.
+    
+        Parameters
+        ----------
+        mode: str, default 'regression'
+            The model type - classification or regression.
+        n_classes: int, default 3
+            The number of classes to predict (used only in classification mode).
+        n_tasks: int, default 1
+            The number of tasks.
+        global_features_size: int, default 0
+            Size of the global features vector, based on the global featurizers used during featurization.
+        use_default_fdim: bool
+            If `True`, self.atom_fdim and self.bond_fdim are initialized using values from the GraphConvConstants class.
+            If `False`, self.atom_fdim and self.bond_fdim are initialized from the values provided.
+        atom_fdim: int
+            Dimension of atom feature vector.
+        bond_fdim: int
+            Dimension of bond feature vector.
+        enc_hidden: int
+            Size of hidden layer in the encoder layer.
+        depth: int
+            No of message passing steps.
+        bias: bool
+            If `True`, dense layers will use bias vectors.
+        enc_activation: str
+            Activation function to be used in the encoder layer.
+            Can choose between 'relu' for ReLU, 'leakyrelu' for LeakyReLU, 'prelu' for PReLU,
+            'tanh' for TanH, 'selu' for SELU, and 'elu' for ELU.
+        enc_dropout_p: float
+            Dropout probability for the encoder layer.
+        aggregation: str
+            Aggregation type to be used in the encoder layer.
+            Can choose between 'mean', 'sum', and 'norm'.
+        aggregation_norm: Union[int, float]
+            Value required if `aggregation` type is 'norm'.
+        ffn_hidden: int
+            Size of hidden layer in the feed-forward network layer.
+        ffn_activation: str
+            Activation function to be used in feed-forward network layer.
+            Can choose between 'relu' for ReLU, 'leakyrelu' for LeakyReLU, 'prelu' for PReLU,
+            'tanh' for TanH, 'selu' for SELU, and 'elu' for ELU.
+        ffn_layers: int
+            Number of layers in the feed-forward network layer.
+        ffn_dropout_p: float
+            Dropout probability for the feed-forward network layer.
+        ffn_dropout_at_input_no_act: bool
+            If true, dropout is applied on the input tensor. For single layer, it is not passed to an activation function.
+        """
+^
+deepchem/models\torch_models\dmpnn.py:398:1: W293 blank line contains whitespace
+        """
+        Parameters
+        ----------
+        data: Batch
+            A pytorch-geometric batch containing tensors for:
+        
+            - atom_features
+            - f_ini_atoms_bonds
+            - atom_to_incoming_bonds
+            - mapping
+            - global_features
+    
+        The `molecules_unbatch_key` is also derived from the batch.
+        (List containing number of atoms in various molecules of the batch)
+    
+        Returns
+        -------
+        output: Union[torch.Tensor, Sequence[torch.Tensor]]
+            Predictions for the graphs
+        """
+^
+deepchem/models\torch_models\dmpnn.py:404:1: W293 blank line contains whitespace
+        """
+        Parameters
+        ----------
+        data: Batch
+            A pytorch-geometric batch containing tensors for:
+        
+            - atom_features
+            - f_ini_atoms_bonds
+            - atom_to_incoming_bonds
+            - mapping
+            - global_features
+    
+        The `molecules_unbatch_key` is also derived from the batch.
+        (List containing number of atoms in various molecules of the batch)
+    
+        Returns
+        -------
+        output: Union[torch.Tensor, Sequence[torch.Tensor]]
+            Predictions for the graphs
+        """
+^
+deepchem/models\torch_models\dmpnn.py:407:1: W293 blank line contains whitespace
+        """
+        Parameters
+        ----------
+        data: Batch
+            A pytorch-geometric batch containing tensors for:
+        
+            - atom_features
+            - f_ini_atoms_bonds
+            - atom_to_incoming_bonds
+            - mapping
+            - global_features
+    
+        The `molecules_unbatch_key` is also derived from the batch.
+        (List containing number of atoms in various molecules of the batch)
+    
+        Returns
+        -------
+        output: Union[torch.Tensor, Sequence[torch.Tensor]]
+            Predictions for the graphs
+        """
+^
+deepchem/models\torch_models\dmpnn.py:507:1: W293 blank line contains whitespace
+        """Initialize the DMPNNModel class.
+    
+        Parameters
+        ----------
+        mode: str, default 'regression'
+            The model type - classification or regression.
+        n_classes: int, default 3
+            The number of classes to predict (used only in classification mode).
+        n_tasks: int, default 1
+            The number of tasks.
+        batch_size: int, default 1
+            The number of datapoints in a batch.
+        global_features_size: int, default 0
+            Size of the global features vector, based on the global featurizers used during featurization.
+        use_default_fdim: bool
+            If `True`, self.atom_fdim and self.bond_fdim are initialized using values from the GraphConvConstants class.
+            If `False`, self.atom_fdim and self.bond_fdim are initialized from the values provided.
+        atom_fdim: int
+            Dimension of atom feature vector.
+        bond_fdim: int
+            Dimension of bond feature vector.
+        enc_hidden: int
+            Size of hidden layer in the encoder layer.
+        depth: int
+            No of message passing steps.
+        bias: bool
+            If `True`, dense layers will use bias vectors.
+        enc_activation: str
+            Activation function to be used in the encoder layer.
+            Can choose between 'relu' for ReLU, 'leakyrelu' for LeakyReLU, 'prelu' for PReLU,
+            'tanh' for TanH, 'selu' for SELU, and 'elu' for ELU.
+        enc_dropout_p: float
+            Dropout probability for the encoder layer.
+        aggregation: str
+            Aggregation type to be used in the encoder layer.
+            Can choose between 'mean', 'sum', and 'norm'.
+        aggregation_norm: Union[int, float]
+            Value required if `aggregation` type is 'norm'.
+        ffn_hidden: int
+            Size of hidden layer in the feed-forward network layer.
+        ffn_activation: str
+            Activation function to be used in feed-forward network layer.
+            Can choose between 'relu' for ReLU, 'leakyrelu' for LeakyReLU, 'prelu' for PReLU,
+            'tanh' for TanH, 'selu' for SELU, and 'elu' for ELU.
+        ffn_layers: int
+            Number of layers in the feed-forward network layer.
+        ffn_dropout_p: float
+            Dropout probability for the feed-forward network layer.
+        ffn_dropout_at_input_no_act: bool
+            If true, dropout is applied on the input tensor. For single layer, it is not passed to an activation function.
+        kwargs: Dict
+            kwargs supported by TorchModel
+        """
+^
+deepchem/models\torch_models\dmpnn.py:594:1: W293 blank line contains whitespace
+        """Convert to PyTorch Geometric graph modified data instance
+    
+        .. note::
+            This method requires PyTorch Geometric to be installed.
+    
+        Parameters
+        ----------
+        values: Sequence[np.ndarray]
+            Mappings from ``_MapperDMPNN`` helper class for a molecule
+    
+        Returns
+        -------
+        torch_geometric.data.Data
+            Modified Graph data for PyTorch Geometric (``_ModData``)
+        """
+^
+deepchem/models\torch_models\dmpnn.py:597:1: W293 blank line contains whitespace
+        """Convert to PyTorch Geometric graph modified data instance
+    
+        .. note::
+            This method requires PyTorch Geometric to be installed.
+    
+        Parameters
+        ----------
+        values: Sequence[np.ndarray]
+            Mappings from ``_MapperDMPNN`` helper class for a molecule
+    
+        Returns
+        -------
+        torch_geometric.data.Data
+            Modified Graph data for PyTorch Geometric (``_ModData``)
+        """
+^
+deepchem/models\torch_models\dmpnn.py:602:1: W293 blank line contains whitespace
+        """Convert to PyTorch Geometric graph modified data instance
+    
+        .. note::
+            This method requires PyTorch Geometric to be installed.
+    
+        Parameters
+        ----------
+        values: Sequence[np.ndarray]
+            Mappings from ``_MapperDMPNN`` helper class for a molecule
+    
+        Returns
+        -------
+        torch_geometric.data.Data
+            Modified Graph data for PyTorch Geometric (``_ModData``)
+        """
+^
+deepchem/models\torch_models\dmpnn.py:649:1: W293 blank line contains whitespace
+        """Method to prepare pytorch-geometric batches from inputs.
+    
+        Overrides the existing ``_prepare_batch`` method to customize how model batches are
+        generated from the inputs.
+    
+        .. note::
+            This method requires PyTorch Geometric to be installed.
+    
+        Parameters
+        ----------
+        batch: Tuple[List, List, List]
+            batch data from ``default_generator``
+    
+        Returns
+        -------
+        Tuple[Batch, List[torch.Tensor], List[torch.Tensor]]
+        """
+^
+deepchem/models\torch_models\dmpnn.py:652:1: W293 blank line contains whitespace
+        """Method to prepare pytorch-geometric batches from inputs.
+    
+        Overrides the existing ``_prepare_batch`` method to customize how model batches are
+        generated from the inputs.
+    
+        .. note::
+            This method requires PyTorch Geometric to be installed.
+    
+        Parameters
+        ----------
+        batch: Tuple[List, List, List]
+            batch data from ``default_generator``
+    
+        Returns
+        -------
+        Tuple[Batch, List[torch.Tensor], List[torch.Tensor]]
+        """
+^
+deepchem/models\torch_models\dmpnn.py:655:1: W293 blank line contains whitespace
+        """Method to prepare pytorch-geometric batches from inputs.
+    
+        Overrides the existing ``_prepare_batch`` method to customize how model batches are
+        generated from the inputs.
+    
+        .. note::
+            This method requires PyTorch Geometric to be installed.
+    
+        Parameters
+        ----------
+        batch: Tuple[List, List, List]
+            batch data from ``default_generator``
+    
+        Returns
+        -------
+        Tuple[Batch, List[torch.Tensor], List[torch.Tensor]]
+        """
+^
+deepchem/models\torch_models\dmpnn.py:660:1: W293 blank line contains whitespace
+        """Method to prepare pytorch-geometric batches from inputs.
+    
+        Overrides the existing ``_prepare_batch`` method to customize how model batches are
+        generated from the inputs.
+    
+        .. note::
+            This method requires PyTorch Geometric to be installed.
+    
+        Parameters
+        ----------
+        batch: Tuple[List, List, List]
+            batch data from ``default_generator``
+    
+        Returns
+        -------
+        Tuple[Batch, List[torch.Tensor], List[torch.Tensor]]
+        """
+^
+deepchem/models\torch_models\dmpnn.py:685:1: W293 blank line contains whitespace
+        """Create a generator that iterates batches for a dataset.
+    
+        Overrides the existing ``default_generator`` method to customize how model inputs are
+        generated from the data.
+    
+        Here, the ``_MapperDMPNN`` helper class is used, for each molecule in a batch, to get required input parameters:
+    
+        - atom_features
+        - f_ini_atoms_bonds
+        - atom_to_incoming_bonds
+        - mapping
+        - global_features
+    
+        Then data from each molecule is converted to a ``_ModData`` object and stored as list of graphs.
+        The graphs are modified such that all tensors have same size in 0th dimension. (important requirement for batching)
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            the data to iterate
+        epochs: int
+            the number of times to iterate over the full dataset
+        mode: str
+            allowed values are 'fit' (called during training), 'predict' (called
+            during prediction), and 'uncertainty' (called during uncertainty
+            prediction)
+        deterministic: bool
+            whether to iterate over the dataset in order, or randomly shuffle the
+            data for each epoch
+        pad_batches: bool
+            whether to pad each batch up to this model's preferred batch size
+    
+        Returns
+        -------
+        a generator that iterates batches, each represented as a tuple of lists:
+        ([inputs], [outputs], [weights])
+        Here, [inputs] is list of graphs.
+        """
+^
+deepchem/models\torch_models\dmpnn.py:688:1: W293 blank line contains whitespace
+        """Create a generator that iterates batches for a dataset.
+    
+        Overrides the existing ``default_generator`` method to customize how model inputs are
+        generated from the data.
+    
+        Here, the ``_MapperDMPNN`` helper class is used, for each molecule in a batch, to get required input parameters:
+    
+        - atom_features
+        - f_ini_atoms_bonds
+        - atom_to_incoming_bonds
+        - mapping
+        - global_features
+    
+        Then data from each molecule is converted to a ``_ModData`` object and stored as list of graphs.
+        The graphs are modified such that all tensors have same size in 0th dimension. (important requirement for batching)
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            the data to iterate
+        epochs: int
+            the number of times to iterate over the full dataset
+        mode: str
+            allowed values are 'fit' (called during training), 'predict' (called
+            during prediction), and 'uncertainty' (called during uncertainty
+            prediction)
+        deterministic: bool
+            whether to iterate over the dataset in order, or randomly shuffle the
+            data for each epoch
+        pad_batches: bool
+            whether to pad each batch up to this model's preferred batch size
+    
+        Returns
+        -------
+        a generator that iterates batches, each represented as a tuple of lists:
+        ([inputs], [outputs], [weights])
+        Here, [inputs] is list of graphs.
+        """
+^
+deepchem/models\torch_models\dmpnn.py:690:1: W293 blank line contains whitespace
+        """Create a generator that iterates batches for a dataset.
+    
+        Overrides the existing ``default_generator`` method to customize how model inputs are
+        generated from the data.
+    
+        Here, the ``_MapperDMPNN`` helper class is used, for each molecule in a batch, to get required input parameters:
+    
+        - atom_features
+        - f_ini_atoms_bonds
+        - atom_to_incoming_bonds
+        - mapping
+        - global_features
+    
+        Then data from each molecule is converted to a ``_ModData`` object and stored as list of graphs.
+        The graphs are modified such that all tensors have same size in 0th dimension. (important requirement for batching)
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            the data to iterate
+        epochs: int
+            the number of times to iterate over the full dataset
+        mode: str
+            allowed values are 'fit' (called during training), 'predict' (called
+            during prediction), and 'uncertainty' (called during uncertainty
+            prediction)
+        deterministic: bool
+            whether to iterate over the dataset in order, or randomly shuffle the
+            data for each epoch
+        pad_batches: bool
+            whether to pad each batch up to this model's preferred batch size
+    
+        Returns
+        -------
+        a generator that iterates batches, each represented as a tuple of lists:
+        ([inputs], [outputs], [weights])
+        Here, [inputs] is list of graphs.
+        """
+^
+deepchem/models\torch_models\dmpnn.py:696:1: W293 blank line contains whitespace
+        """Create a generator that iterates batches for a dataset.
+    
+        Overrides the existing ``default_generator`` method to customize how model inputs are
+        generated from the data.
+    
+        Here, the ``_MapperDMPNN`` helper class is used, for each molecule in a batch, to get required input parameters:
+    
+        - atom_features
+        - f_ini_atoms_bonds
+        - atom_to_incoming_bonds
+        - mapping
+        - global_features
+    
+        Then data from each molecule is converted to a ``_ModData`` object and stored as list of graphs.
+        The graphs are modified such that all tensors have same size in 0th dimension. (important requirement for batching)
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            the data to iterate
+        epochs: int
+            the number of times to iterate over the full dataset
+        mode: str
+            allowed values are 'fit' (called during training), 'predict' (called
+            during prediction), and 'uncertainty' (called during uncertainty
+            prediction)
+        deterministic: bool
+            whether to iterate over the dataset in order, or randomly shuffle the
+            data for each epoch
+        pad_batches: bool
+            whether to pad each batch up to this model's preferred batch size
+    
+        Returns
+        -------
+        a generator that iterates batches, each represented as a tuple of lists:
+        ([inputs], [outputs], [weights])
+        Here, [inputs] is list of graphs.
+        """
+^
+deepchem/models\torch_models\dmpnn.py:699:1: W293 blank line contains whitespace
+        """Create a generator that iterates batches for a dataset.
+    
+        Overrides the existing ``default_generator`` method to customize how model inputs are
+        generated from the data.
+    
+        Here, the ``_MapperDMPNN`` helper class is used, for each molecule in a batch, to get required input parameters:
+    
+        - atom_features
+        - f_ini_atoms_bonds
+        - atom_to_incoming_bonds
+        - mapping
+        - global_features
+    
+        Then data from each molecule is converted to a ``_ModData`` object and stored as list of graphs.
+        The graphs are modified such that all tensors have same size in 0th dimension. (important requirement for batching)
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            the data to iterate
+        epochs: int
+            the number of times to iterate over the full dataset
+        mode: str
+            allowed values are 'fit' (called during training), 'predict' (called
+            during prediction), and 'uncertainty' (called during uncertainty
+            prediction)
+        deterministic: bool
+            whether to iterate over the dataset in order, or randomly shuffle the
+            data for each epoch
+        pad_batches: bool
+            whether to pad each batch up to this model's preferred batch size
+    
+        Returns
+        -------
+        a generator that iterates batches, each represented as a tuple of lists:
+        ([inputs], [outputs], [weights])
+        Here, [inputs] is list of graphs.
+        """
+^
+deepchem/models\torch_models\dmpnn.py:715:1: W293 blank line contains whitespace
+        """Create a generator that iterates batches for a dataset.
+    
+        Overrides the existing ``default_generator`` method to customize how model inputs are
+        generated from the data.
+    
+        Here, the ``_MapperDMPNN`` helper class is used, for each molecule in a batch, to get required input parameters:
+    
+        - atom_features
+        - f_ini_atoms_bonds
+        - atom_to_incoming_bonds
+        - mapping
+        - global_features
+    
+        Then data from each molecule is converted to a ``_ModData`` object and stored as list of graphs.
+        The graphs are modified such that all tensors have same size in 0th dimension. (important requirement for batching)
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            the data to iterate
+        epochs: int
+            the number of times to iterate over the full dataset
+        mode: str
+            allowed values are 'fit' (called during training), 'predict' (called
+            during prediction), and 'uncertainty' (called during uncertainty
+            prediction)
+        deterministic: bool
+            whether to iterate over the dataset in order, or randomly shuffle the
+            data for each epoch
+        pad_batches: bool
+            whether to pad each batch up to this model's preferred batch size
+    
+        Returns
+        -------
+        a generator that iterates batches, each represented as a tuple of lists:
+        ([inputs], [outputs], [weights])
+        Here, [inputs] is list of graphs.
+        """
+^
+deepchem/models\torch_models\ferminet.py:75:1: W293 blank line contains whitespace
+        """Prepares the one-electron and two-electron input stream for the model.
+    
+        Returns:
+        --------
+        one_electron_up: numpy.ndarray
+            numpy array containing one-electron coordinates and distances for the up spin electrons.
+        one_electron_down: numpy.ndarray
+            numpy array containing one-electron coordinates and distances for the down spin electrons
+        two_electron_up: numpy.ndarray
+            numpy array containing two-electron coordinates and distances for the up spin electrons
+        two_electron_down: numpy.ndarray
+            numpy array containing two-electron coordinates and distances for the down spin electrons
+        """
+^
+deepchem/models\torch_models\gat.py:117:13: F401 'dgl' imported but unused
+            import dgl
+            ^
+deepchem/models\torch_models\gat.py:121:13: F401 'dgllife' imported but unused
+            import dgllife
+            ^
+deepchem/models\torch_models\gat.py:181:1: W293 blank line contains whitespace
+        """Predict graph labels
+    
+        Parameters
+        ----------
+        g: DGLGraph
+            A DGLGraph for a batch of graphs. It stores the node features in
+            ``dgl_graph.ndata[self.nfeat_name]``.
+    
+        Returns
+        -------
+        torch.Tensor
+            The model output.
+    
+        * When self.mode = 'regression',
+            its shape will be ``(dgl_graph.batch_size, self.n_tasks)``.
+        * When self.mode = 'classification', the output consists of probabilities
+            for classes. Its shape will be
+            ``(dgl_graph.batch_size, self.n_tasks, self.n_classes)`` if self.n_tasks > 1;
+            its shape will be ``(dgl_graph.batch_size, self.n_classes)`` if self.n_tasks is 1.
+
+        torch.Tensor, optional
+            This is only returned when self.mode = 'classification', the output consists of the
+            logits for classes before softmax.
+        """
+^
+deepchem/models\torch_models\gat.py:187:1: W293 blank line contains whitespace
+        """Predict graph labels
+    
+        Parameters
+        ----------
+        g: DGLGraph
+            A DGLGraph for a batch of graphs. It stores the node features in
+            ``dgl_graph.ndata[self.nfeat_name]``.
+    
+        Returns
+        -------
+        torch.Tensor
+            The model output.
+    
+        * When self.mode = 'regression',
+            its shape will be ``(dgl_graph.batch_size, self.n_tasks)``.
+        * When self.mode = 'classification', the output consists of probabilities
+            for classes. Its shape will be
+            ``(dgl_graph.batch_size, self.n_tasks, self.n_classes)`` if self.n_tasks > 1;
+            its shape will be ``(dgl_graph.batch_size, self.n_classes)`` if self.n_tasks is 1.
+
+        torch.Tensor, optional
+            This is only returned when self.mode = 'classification', the output consists of the
+            logits for classes before softmax.
+        """
+^
+deepchem/models\torch_models\gat.py:192:1: W293 blank line contains whitespace
+        """Predict graph labels
+    
+        Parameters
+        ----------
+        g: DGLGraph
+            A DGLGraph for a batch of graphs. It stores the node features in
+            ``dgl_graph.ndata[self.nfeat_name]``.
+    
+        Returns
+        -------
+        torch.Tensor
+            The model output.
+    
+        * When self.mode = 'regression',
+            its shape will be ``(dgl_graph.batch_size, self.n_tasks)``.
+        * When self.mode = 'classification', the output consists of probabilities
+            for classes. Its shape will be
+            ``(dgl_graph.batch_size, self.n_tasks, self.n_classes)`` if self.n_tasks > 1;
+            its shape will be ``(dgl_graph.batch_size, self.n_classes)`` if self.n_tasks is 1.
+
+        torch.Tensor, optional
+            This is only returned when self.mode = 'classification', the output consists of the
+            logits for classes before softmax.
+        """
+^
+deepchem/models\torch_models\gat.py:349:1: W293 blank line contains whitespace
+        """Create batch data for GAT.
+    
+        Parameters
+        ----------
+        batch: tuple
+            The tuple is ``(inputs, labels, weights)``.
+    
+        Returns
+        -------
+        inputs: DGLGraph
+            DGLGraph for a batch of graphs.
+        labels: list of torch.Tensor or None
+            The graph labels.
+        weights: list of torch.Tensor or None
+            The weights for each sample or sample/task pair converted to torch.Tensor.
+        """
+^
+deepchem/models\torch_models\gat.py:354:1: W293 blank line contains whitespace
+        """Create batch data for GAT.
+    
+        Parameters
+        ----------
+        batch: tuple
+            The tuple is ``(inputs, labels, weights)``.
+    
+        Returns
+        -------
+        inputs: DGLGraph
+            DGLGraph for a batch of graphs.
+        labels: list of torch.Tensor or None
+            The graph labels.
+        weights: list of torch.Tensor or None
+            The weights for each sample or sample/task pair converted to torch.Tensor.
+        """
+^
+deepchem/models\torch_models\gcn.py:119:13: F401 'dgl' imported but unused
+            import dgl
+            ^
+deepchem/models\torch_models\gcn.py:123:13: F401 'dgllife' imported but unused
+            import dgllife
+            ^
+deepchem/models\torch_models\gcn.py:164:1: W293 blank line contains whitespace
+        """Predict graph labels
+    
+        Parameters
+        ----------
+        g: DGLGraph
+            A DGLGraph for a batch of graphs. It stores the node features in
+            ``dgl_graph.ndata[self.nfeat_name]``.
+    
+        Returns
+        -------
+        torch.Tensor
+            The model output.
+    
+        * When self.mode = 'regression',
+            its shape will be ``(dgl_graph.batch_size, self.n_tasks)``.
+        * When self.mode = 'classification', the output consists of probabilities
+            for classes. Its shape will be ``(dgl_graph.batch_size, self.n_tasks, self.n_classes)``
+            if self.n_tasks > 1; its shape will be ``(dgl_graph.batch_size, self.n_classes)`` if
+            self.n_tasks is 1.
+        torch.Tensor, optional
+            This is only returned when self.mode = 'classification', the output consists of the
+            logits for classes before softmax.
+        """
+^
+deepchem/models\torch_models\gcn.py:170:1: W293 blank line contains whitespace
+        """Predict graph labels
+    
+        Parameters
+        ----------
+        g: DGLGraph
+            A DGLGraph for a batch of graphs. It stores the node features in
+            ``dgl_graph.ndata[self.nfeat_name]``.
+    
+        Returns
+        -------
+        torch.Tensor
+            The model output.
+    
+        * When self.mode = 'regression',
+            its shape will be ``(dgl_graph.batch_size, self.n_tasks)``.
+        * When self.mode = 'classification', the output consists of probabilities
+            for classes. Its shape will be ``(dgl_graph.batch_size, self.n_tasks, self.n_classes)``
+            if self.n_tasks > 1; its shape will be ``(dgl_graph.batch_size, self.n_classes)`` if
+            self.n_tasks is 1.
+        torch.Tensor, optional
+            This is only returned when self.mode = 'classification', the output consists of the
+            logits for classes before softmax.
+        """
+^
+deepchem/models\torch_models\gcn.py:175:1: W293 blank line contains whitespace
+        """Predict graph labels
+    
+        Parameters
+        ----------
+        g: DGLGraph
+            A DGLGraph for a batch of graphs. It stores the node features in
+            ``dgl_graph.ndata[self.nfeat_name]``.
+    
+        Returns
+        -------
+        torch.Tensor
+            The model output.
+    
+        * When self.mode = 'regression',
+            its shape will be ``(dgl_graph.batch_size, self.n_tasks)``.
+        * When self.mode = 'classification', the output consists of probabilities
+            for classes. Its shape will be ``(dgl_graph.batch_size, self.n_tasks, self.n_classes)``
+            if self.n_tasks > 1; its shape will be ``(dgl_graph.batch_size, self.n_classes)`` if
+            self.n_tasks is 1.
+        torch.Tensor, optional
+            This is only returned when self.mode = 'classification', the output consists of the
+            logits for classes before softmax.
+        """
+^
+deepchem/models\torch_models\gcn.py:331:1: W293 blank line contains whitespace
+        """Create batch data for GCN.
+    
+        Parameters
+        ----------
+        batch: tuple
+            The tuple is ``(inputs, labels, weights)``.
+    
+        Returns
+        -------
+        inputs: DGLGraph
+            DGLGraph for a batch of graphs.
+        labels: list of torch.Tensor or None
+            The graph labels.
+        weights: list of torch.Tensor or None
+            The weights for each sample or sample/task pair converted to torch.Tensor.
+        """
+^
+deepchem/models\torch_models\gcn.py:336:1: W293 blank line contains whitespace
+        """Create batch data for GCN.
+    
+        Parameters
+        ----------
+        batch: tuple
+            The tuple is ``(inputs, labels, weights)``.
+    
+        Returns
+        -------
+        inputs: DGLGraph
+            DGLGraph for a batch of graphs.
+        labels: list of torch.Tensor or None
+            The graph labels.
+        weights: list of torch.Tensor or None
+            The weights for each sample or sample/task pair converted to torch.Tensor.
+        """
+^
+deepchem/models\torch_models\layers.py:1177:301: E501 line too long (301 > 300 characters)
+        """Output computation for a GraphNetwork
+
+        Parameters
+        ----------
+        node_features: torch.Tensor
+            Input node features of shape :math:`(|\mathcal{V}|, F_n)`
+        edge_index: torch.Tensor
+            Edge indexes of shape :math:`(2, |\mathcal{E}|)`
+        edge_features: torch.Tensor
+            Edge features of the graph, shape: :math:`(|\mathcal{E}|, F_e)`
+        global_features: torch.Tensor
+            Global features of the graph, shape: :math:`(F_g, 1)` where, :math:`|\mathcal{V}|` and :math:`|\mathcal{E}|` denotes the number of nodes and edges in the graph, :math:`F_n`, :math:`F_e`, :math:`F_g` denotes the number of node features, edge features and global state features respectively.
+        batch: torch.LongTensor (optional, default: None)
+            A vector that maps each node to its respective graph identifier. The attribute is used only when more than one graph are batched together during a single forward pass.
+        """
+                                                
+
+                  
+                  
+                                   
+                                                                     
+                                
+                                                            
+            ^
+deepchem/models\torch_models\megnet.py:52:1: W293 blank line contains whitespace
+        """
+    
+        Parameters
+        ----------
+        n_node_features: int
+            Number of features in a node
+        n_edge_features: int
+            Number of features in a edge
+        n_global_features: int
+            Number of global features
+        n_blocks: int
+            Number of GraphNetworks block to use in update
+        is_undirected: bool, optional (default True)
+            True when the graph is undirected graph , otherwise False
+        residual_connection: bool, optional (default True)
+            If True, the layer uses a residual connection during training
+        n_tasks: int, default 1
+            The number of tasks
+        mode: str, default 'regression'
+            The model type - classification or regression
+        n_classes: int, default 2
+            The number of classes to predict (used only in classification mode).
+        """
+^
+deepchem/models\torch_models\megnet.py:127:1: W293 blank line contains whitespace
+        """
+        Parameters
+        ----------
+        pyg_batch: torch_geometric.data.Batch
+            A pytorch-geometric batch of graphs where node attributes are stores
+            as pyg_batch['x'], edge_index in pyg_batch['edge_index'], edge features
+            in pyg_batch['edge_attr'], global features in pyg_batch['global_features']
+    
+        Returns
+        -------
+        torch.Tensor: Predictions for the graph
+        """
+^
+deepchem/models\torch_models\megnet.py:245:1: W293 blank line contains whitespace
+        """Creates batch data for MEGNet model
+    
+        Note
+        ----
+        Ideally, we should only override default_generator method. But the problem
+        here is that we _prepare_batch of TorchModel only supports non-graph
+        data types. Hence, we are overriding it here. This should be fixed
+        some time in the future.
+        """
+^
+deepchem/models\torch_models\mpnn.py:101:7: F401 'dgl' imported but unused
+      import dgl
+      ^
+deepchem/models\torch_models\mpnn.py:105:7: F401 'dgllife' imported but unused
+      import dgllife
+      ^
+deepchem/models\torch_models\normalizing_flows_pytorch.py:5:1: F401 'torch.distributions.multivariate_normal.MultivariateNormal' imported but unused
+from torch.distributions.multivariate_normal import MultivariateNormal
+^
+deepchem/models\torch_models\normalizing_flows_pytorch.py:6:1: F401 'deepchem.models.torch_models.layers.RealNVPLayer' imported but unused
+from deepchem.models.torch_models.layers import RealNVPLayer
+^
+deepchem/models\torch_models\normalizing_flows_pytorch.py:44:1: W293 blank line contains whitespace
+        """This class considers a transformation, or a composition of transformations
+        functions (layers), between a base distribution and a target distribution.
+    
+        Parameters
+        ----------
+        transform: Sequence
+            Bijective transformation/transformations which are considered the layers
+            of a Normalizing Flow model.
+        base_distribution: torch.Tensor
+            Probability distribution to initialize the algorithm. The Multivariate Normal
+            distribution is mainly used for this parameter.
+        dim: int
+            Value of the Nth dimension of the dataset.
+    
+        """
+^
+deepchem/models\torch_models\normalizing_flows_pytorch.py:55:1: W293 blank line contains whitespace
+        """This class considers a transformation, or a composition of transformations
+        functions (layers), between a base distribution and a target distribution.
+    
+        Parameters
+        ----------
+        transform: Sequence
+            Bijective transformation/transformations which are considered the layers
+            of a Normalizing Flow model.
+        base_distribution: torch.Tensor
+            Probability distribution to initialize the algorithm. The Multivariate Normal
+            distribution is mainly used for this parameter.
+        dim: int
+            Value of the Nth dimension of the dataset.
+    
+        """
+^
+deepchem/models\torch_models\normalizing_flows_pytorch.py:65:1: W293 blank line contains whitespace
+        """This method computes the probability of the inputs when
+        transformation/transformations are applied.
+    
+        Parameters
+        ----------
+        inputs: torch.Tensor
+            Tensor used to evaluate the log_prob computation of the learned
+            distribution.
+            shape: (samples, dim)
+    
+        Returns
+        -------
+        log_prob: torch.Tensor
+            This tensor contains the value of the log probability computed.
+            shape: (samples)
+    
+        """
+^
+deepchem/models\torch_models\normalizing_flows_pytorch.py:72:1: W293 blank line contains whitespace
+        """This method computes the probability of the inputs when
+        transformation/transformations are applied.
+    
+        Parameters
+        ----------
+        inputs: torch.Tensor
+            Tensor used to evaluate the log_prob computation of the learned
+            distribution.
+            shape: (samples, dim)
+    
+        Returns
+        -------
+        log_prob: torch.Tensor
+            This tensor contains the value of the log probability computed.
+            shape: (samples)
+    
+        """
+^
+deepchem/models\torch_models\normalizing_flows_pytorch.py:78:1: W293 blank line contains whitespace
+        """This method computes the probability of the inputs when
+        transformation/transformations are applied.
+    
+        Parameters
+        ----------
+        inputs: torch.Tensor
+            Tensor used to evaluate the log_prob computation of the learned
+            distribution.
+            shape: (samples, dim)
+    
+        Returns
+        -------
+        log_prob: torch.Tensor
+            This tensor contains the value of the log probability computed.
+            shape: (samples)
+    
+        """
+^
+deepchem/models\torch_models\normalizing_flows_pytorch.py:91:1: W293 blank line contains whitespace
+        """Performs a sampling from the transformed distribution.
+        Besides the outputs (sampling), this method returns the logarithm of
+        probability to obtain the outputs at the base distribution.
+    
+        Parameters
+        ----------
+        n_samples: int
+            Number of samples to select from the transformed distribution
+    
+        Returns
+        -------
+        sample: tuple
+            This tuple contains a two torch.Tensor objects. The first represents
+            a sampling of the learned distribution when transformations had been
+            applied. The secong torc.Tensor is the computation of log probabilities
+            of the transformed distribution.
+            shape: ((samples, dim), (samples))
+    
+        """
+^
+deepchem/models\torch_models\normalizing_flows_pytorch.py:96:1: W293 blank line contains whitespace
+        """Performs a sampling from the transformed distribution.
+        Besides the outputs (sampling), this method returns the logarithm of
+        probability to obtain the outputs at the base distribution.
+    
+        Parameters
+        ----------
+        n_samples: int
+            Number of samples to select from the transformed distribution
+    
+        Returns
+        -------
+        sample: tuple
+            This tuple contains a two torch.Tensor objects. The first represents
+            a sampling of the learned distribution when transformations had been
+            applied. The secong torc.Tensor is the computation of log probabilities
+            of the transformed distribution.
+            shape: ((samples, dim), (samples))
+    
+        """
+^
+deepchem/models\torch_models\normalizing_flows_pytorch.py:105:1: W293 blank line contains whitespace
+        """Performs a sampling from the transformed distribution.
+        Besides the outputs (sampling), this method returns the logarithm of
+        probability to obtain the outputs at the base distribution.
+    
+        Parameters
+        ----------
+        n_samples: int
+            Number of samples to select from the transformed distribution
+    
+        Returns
+        -------
+        sample: tuple
+            This tuple contains a two torch.Tensor objects. The first represents
+            a sampling of the learned distribution when transformations had been
+            applied. The secong torc.Tensor is the computation of log probabilities
+            of the transformed distribution.
+            shape: ((samples, dim), (samples))
+    
+        """
+^
+deepchem/models\torch_models\pagtn.py:106:7: F401 'dgl' imported but unused
+      import dgl
+      ^
+deepchem/models\torch_models\pagtn.py:110:7: F401 'dgllife' imported but unused
+      import dgllife
+      ^
+deepchem/models\torch_models\torch_model.py:22:1: F401 'deepchem.utils.typing.ArrayLike' imported but unused
+from deepchem.utils.typing import ArrayLike, LossFn, OneOrMany
+^
+deepchem/models\torch_models\torch_model.py:132:1: W293 blank line contains whitespace
+        """Create a new TorchModel.
+    
+        Parameters
+        ----------
+        model: torch.nn.Module
+            the PyTorch model implementing the calculation
+        loss: dc.models.losses.Loss or function
+            a Loss or function defining how to compute the training loss for each
+            batch, as described above
+        output_types: list of strings, optional (default None)
+            the type of each output from the model, as described above
+        batch_size: int, optional (default 100)
+            default batch size for training and evaluating
+        model_dir: str, optional (default None)
+            the directory on disk where the model will be stored.  If this is None,
+            a temporary directory is created.
+        learning_rate: float or LearningRateSchedule, optional (default 0.001)
+            the learning rate to use for fitting.  If optimizer is specified, this is
+            ignored.
+        optimizer: Optimizer, optional (default None)
+            the optimizer to use for fitting.  If this is specified, learning_rate is
+            ignored.
+        tensorboard: bool, optional (default False)
+            whether to log progress to TensorBoard during training
+        wandb: bool, optional (default False)
+            whether to log progress to Weights & Biases during training
+        log_frequency: int, optional (default 100)
+            The frequency at which to log data. Data is logged using
+            `logging` by default. If `tensorboard` is set, data is also
+            logged to TensorBoard. If `wandb` is set, data is also logged
+            to Weights & Biases. Logging happens at global steps. Roughly,
+            a global step corresponds to one batch of training. If you'd
+            like a printout every 10 batch steps, you'd set
+            `log_frequency=10` for example.
+        device: torch.device, optional (default None)
+            the device on which to run computations.  If None, a device is
+            chosen automatically.
+        regularization_loss: Callable, optional
+            a function that takes no arguments, and returns an extra contribution to add
+            to the loss function
+        wandb_logger: WandbLogger
+            the Weights & Biases logger object used to log data and metrics
+        """
+^
+deepchem/models\torch_models\torch_model.py:298:1: W293 blank line contains whitespace
+        """Train this model on a dataset.
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            the Dataset to train on
+        nb_epoch: int
+            the number of epochs to train for
+        max_checkpoints_to_keep: int
+            the maximum number of checkpoints to keep.  Older checkpoints are discarded.
+        checkpoint_interval: int
+            the frequency at which to write checkpoints, measured in training steps.
+            Set this to 0 to disable automatic checkpointing.
+        deterministic: bool
+            if True, the samples are processed in order.  If False, a different random
+            order is used for each epoch.
+        restore: bool
+            if True, restore the model from the most recent checkpoint and continue training
+            from there.  If False, retrain the model from scratch.
+        variables: list of torch.nn.Parameter
+            the variables to train.  If None (the default), all trainable variables in
+            the model are used.
+        loss: function
+            a function of the form f(outputs, labels, weights) that computes the loss
+            for each batch.  If None (the default), the model's standard loss function
+            is used.
+        callbacks: function or list of functions
+            one or more functions of the form f(model, step) that will be invoked after
+            every step.  This can be used to perform validation, logging, etc.
+        all_losses: Optional[List[float]], optional (default None)
+            If specified, all logged losses are appended into this list. Note that
+            you can call `fit()` repeatedly with the same list and losses will
+            continue to be appended.
+    
+        Returns
+        -------
+        The average loss over the most recent checkpoint interval
+        """
+^
+deepchem/models\torch_models\torch_model.py:330:1: W293 blank line contains whitespace
+        """Train this model on a dataset.
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            the Dataset to train on
+        nb_epoch: int
+            the number of epochs to train for
+        max_checkpoints_to_keep: int
+            the maximum number of checkpoints to keep.  Older checkpoints are discarded.
+        checkpoint_interval: int
+            the frequency at which to write checkpoints, measured in training steps.
+            Set this to 0 to disable automatic checkpointing.
+        deterministic: bool
+            if True, the samples are processed in order.  If False, a different random
+            order is used for each epoch.
+        restore: bool
+            if True, restore the model from the most recent checkpoint and continue training
+            from there.  If False, retrain the model from scratch.
+        variables: list of torch.nn.Parameter
+            the variables to train.  If None (the default), all trainable variables in
+            the model are used.
+        loss: function
+            a function of the form f(outputs, labels, weights) that computes the loss
+            for each batch.  If None (the default), the model's standard loss function
+            is used.
+        callbacks: function or list of functions
+            one or more functions of the form f(model, step) that will be invoked after
+            every step.  This can be used to perform validation, logging, etc.
+        all_losses: Optional[List[float]], optional (default None)
+            If specified, all logged losses are appended into this list. Note that
+            you can call `fit()` repeatedly with the same list and losses will
+            continue to be appended.
+    
+        Returns
+        -------
+        The average loss over the most recent checkpoint interval
+        """
+^
+deepchem/models\torch_models\torch_model.py:352:1: W293 blank line contains whitespace
+        """Train this model on data from a generator.
+    
+        Parameters
+        ----------
+        generator: generator
+            this should generate batches, each represented as a tuple of the form
+            (inputs, labels, weights).
+        max_checkpoints_to_keep: int
+            the maximum number of checkpoints to keep.  Older checkpoints are discarded.
+        checkpoint_interval: int
+            the frequency at which to write checkpoints, measured in training steps.
+            Set this to 0 to disable automatic checkpointing.
+        restore: bool
+            if True, restore the model from the most recent checkpoint and continue training
+            from there.  If False, retrain the model from scratch.
+        variables: list of torch.nn.Parameter
+            the variables to train.  If None (the default), all trainable variables in
+            the model are used.
+        loss: function
+            a function of the form f(outputs, labels, weights) that computes the loss
+            for each batch.  If None (the default), the model's standard loss function
+            is used.
+        callbacks: function or list of functions
+            one or more functions of the form f(model, step) that will be invoked after
+            every step.  This can be used to perform validation, logging, etc.
+        all_losses: Optional[List[float]], optional (default None)
+            If specified, all logged losses are appended into this list. Note that
+            you can call `fit()` repeatedly with the same list and losses will
+            continue to be appended.
+    
+        Returns
+        -------
+        The average loss over the most recent checkpoint interval
+        """
+^
+deepchem/models\torch_models\torch_model.py:380:1: W293 blank line contains whitespace
+        """Train this model on data from a generator.
+    
+        Parameters
+        ----------
+        generator: generator
+            this should generate batches, each represented as a tuple of the form
+            (inputs, labels, weights).
+        max_checkpoints_to_keep: int
+            the maximum number of checkpoints to keep.  Older checkpoints are discarded.
+        checkpoint_interval: int
+            the frequency at which to write checkpoints, measured in training steps.
+            Set this to 0 to disable automatic checkpointing.
+        restore: bool
+            if True, restore the model from the most recent checkpoint and continue training
+            from there.  If False, retrain the model from scratch.
+        variables: list of torch.nn.Parameter
+            the variables to train.  If None (the default), all trainable variables in
+            the model are used.
+        loss: function
+            a function of the form f(outputs, labels, weights) that computes the loss
+            for each batch.  If None (the default), the model's standard loss function
+            is used.
+        callbacks: function or list of functions
+            one or more functions of the form f(model, step) that will be invoked after
+            every step.  This can be used to perform validation, logging, etc.
+        all_losses: Optional[List[float]], optional (default None)
+            If specified, all logged losses are appended into this list. Note that
+            you can call `fit()` repeatedly with the same list and losses will
+            continue to be appended.
+    
+        Returns
+        -------
+        The average loss over the most recent checkpoint interval
+        """
+^
+deepchem/models\torch_models\torch_model.py:493:1: W293 blank line contains whitespace
+        """Perform a single step of training.
+    
+        Parameters
+        ----------
+        X: ndarray
+            the inputs for the batch
+        y: ndarray
+            the labels for the batch
+        w: ndarray
+            the weights for the batch
+        variables: list of torch.nn.Parameter
+            the variables to train.  If None (the default), all trainable variables in
+            the model are used.
+        loss: function
+            a function of the form f(outputs, labels, weights) that computes the loss
+            for each batch.  If None (the default), the model's standard loss function
+            is used.
+        callbacks: function or list of functions
+            one or more functions of the form f(model, step) that will be invoked after
+            every step.  This can be used to perform validation, logging, etc.
+        checkpoint: bool
+            if true, save a checkpoint after performing the training step
+        max_checkpoints_to_keep: int
+            the maximum number of checkpoints to keep.  Older checkpoints are discarded.
+    
+        Returns
+        -------
+        the loss on the batch
+        """
+^
+deepchem/models\torch_models\torch_model.py:516:1: W293 blank line contains whitespace
+        """Perform a single step of training.
+    
+        Parameters
+        ----------
+        X: ndarray
+            the inputs for the batch
+        y: ndarray
+            the labels for the batch
+        w: ndarray
+            the weights for the batch
+        variables: list of torch.nn.Parameter
+            the variables to train.  If None (the default), all trainable variables in
+            the model are used.
+        loss: function
+            a function of the form f(outputs, labels, weights) that computes the loss
+            for each batch.  If None (the default), the model's standard loss function
+            is used.
+        callbacks: function or list of functions
+            one or more functions of the form f(model, step) that will be invoked after
+            every step.  This can be used to perform validation, logging, etc.
+        checkpoint: bool
+            if true, save a checkpoint after performing the training step
+        max_checkpoints_to_keep: int
+            the maximum number of checkpoints to keep.  Older checkpoints are discarded.
+    
+        Returns
+        -------
+        the loss on the batch
+        """
+^
+deepchem/models\torch_models\torch_model.py:537:1: W293 blank line contains whitespace
+        """
+        Predict outputs for data provided by a generator.
+    
+        This is the private implementation of prediction.  Do not
+        call it directly.  Instead call one of the public prediction
+        methods.
+    
+        Parameters
+        ----------
+        generator: generator
+            this should generate batches, each represented as a tuple of the form
+            (inputs, labels, weights).
+        transformers: list of dc.trans.Transformers
+            Transformers that the input data has been transformed by.  The output
+            is passed through these transformers to undo the transformations.
+        uncertainty: bool
+            specifies whether this is being called as part of estimating uncertainty.
+            If True, it sets the training flag so that dropout will be enabled, and
+            returns the values of the uncertainty outputs.
+        other_output_types: list, optional
+            Provides a list of other output_types (strings) to predict from model.
+        Returns:
+            a NumPy array of the model produces a single output, or a list of arrays
+            if it produces multiple outputs
+        """
+^
+deepchem/models\torch_models\torch_model.py:541:1: W293 blank line contains whitespace
+        """
+        Predict outputs for data provided by a generator.
+    
+        This is the private implementation of prediction.  Do not
+        call it directly.  Instead call one of the public prediction
+        methods.
+    
+        Parameters
+        ----------
+        generator: generator
+            this should generate batches, each represented as a tuple of the form
+            (inputs, labels, weights).
+        transformers: list of dc.trans.Transformers
+            Transformers that the input data has been transformed by.  The output
+            is passed through these transformers to undo the transformations.
+        uncertainty: bool
+            specifies whether this is being called as part of estimating uncertainty.
+            If True, it sets the training flag so that dropout will be enabled, and
+            returns the values of the uncertainty outputs.
+        other_output_types: list, optional
+            Provides a list of other output_types (strings) to predict from model.
+        Returns:
+            a NumPy array of the model produces a single output, or a list of arrays
+            if it produces multiple outputs
+        """
+^
+deepchem/models\torch_models\torch_model.py:669:1: W293 blank line contains whitespace
+        """Generates predictions for input samples, processing samples in a batch.
+    
+        Parameters
+        ----------
+        X: ndarray
+            the input data, as a Numpy array.
+        transformers: list of dc.trans.Transformers
+            Transformers that the input data has been transformed by.  The output
+            is passed through these transformers to undo the transformations.
+    
+        Returns
+        -------
+        a NumPy array of the model produces a single output, or a list of arrays
+        if it produces multiple outputs
+        """
+^
+deepchem/models\torch_models\torch_model.py:677:1: W293 blank line contains whitespace
+        """Generates predictions for input samples, processing samples in a batch.
+    
+        Parameters
+        ----------
+        X: ndarray
+            the input data, as a Numpy array.
+        transformers: list of dc.trans.Transformers
+            Transformers that the input data has been transformed by.  The output
+            is passed through these transformers to undo the transformations.
+    
+        Returns
+        -------
+        a NumPy array of the model produces a single output, or a list of arrays
+        if it produces multiple outputs
+        """
+^
+deepchem/models\torch_models\torch_model.py:692:1: W293 blank line contains whitespace
+        """
+        Predict the model's outputs, along with the uncertainty in each one.
+    
+        The uncertainty is computed as described in https://arxiv.org/abs/1703.04977.
+        It involves repeating the prediction many times with different dropout masks.
+        The prediction is computed as the average over all the predictions.  The
+        uncertainty includes both the variation among the predicted values (epistemic
+        uncertainty) and the model's own estimates for how well it fits the data
+        (aleatoric uncertainty).  Not all models support uncertainty prediction.
+    
+        Parameters
+        ----------
+        X: ndarray
+            the input data, as a Numpy array.
+        masks: int
+            the number of dropout masks to average over
+    
+        Returns
+        -------
+        for each output, a tuple (y_pred, y_std) where y_pred is the predicted
+        value of the output, and each element of y_std estimates the standard
+        deviation of the corresponding element of y_pred
+        """
+^
+deepchem/models\torch_models\torch_model.py:699:1: W293 blank line contains whitespace
+        """
+        Predict the model's outputs, along with the uncertainty in each one.
+    
+        The uncertainty is computed as described in https://arxiv.org/abs/1703.04977.
+        It involves repeating the prediction many times with different dropout masks.
+        The prediction is computed as the average over all the predictions.  The
+        uncertainty includes both the variation among the predicted values (epistemic
+        uncertainty) and the model's own estimates for how well it fits the data
+        (aleatoric uncertainty).  Not all models support uncertainty prediction.
+    
+        Parameters
+        ----------
+        X: ndarray
+            the input data, as a Numpy array.
+        masks: int
+            the number of dropout masks to average over
+    
+        Returns
+        -------
+        for each output, a tuple (y_pred, y_std) where y_pred is the predicted
+        value of the output, and each element of y_std estimates the standard
+        deviation of the corresponding element of y_pred
+        """
+^
+deepchem/models\torch_models\torch_model.py:706:1: W293 blank line contains whitespace
+        """
+        Predict the model's outputs, along with the uncertainty in each one.
+    
+        The uncertainty is computed as described in https://arxiv.org/abs/1703.04977.
+        It involves repeating the prediction many times with different dropout masks.
+        The prediction is computed as the average over all the predictions.  The
+        uncertainty includes both the variation among the predicted values (epistemic
+        uncertainty) and the model's own estimates for how well it fits the data
+        (aleatoric uncertainty).  Not all models support uncertainty prediction.
+    
+        Parameters
+        ----------
+        X: ndarray
+            the input data, as a Numpy array.
+        masks: int
+            the number of dropout masks to average over
+    
+        Returns
+        -------
+        for each output, a tuple (y_pred, y_std) where y_pred is the predicted
+        value of the output, and each element of y_std estimates the standard
+        deviation of the corresponding element of y_pred
+        """
+^
+deepchem/models\torch_models\torch_model.py:723:1: W293 blank line contains whitespace
+        """
+        Uses self to make predictions on provided Dataset object.
+    
+        Parameters
+        ----------
+        dataset: dc.data.Dataset
+            Dataset to make prediction on
+        transformers: list of dc.trans.Transformers
+            Transformers that the input data has been transformed by.  The output
+            is passed through these transformers to undo the transformations.
+        output_types: String or list of Strings
+            If specified, all outputs of this type will be retrieved
+            from the model. If output_types is specified, outputs must
+            be None.
+    
+        Returns
+        -------
+        a NumPy array of the model produces a single output, or a list of arrays
+        if it produces multiple outputs
+        """
+^
+deepchem/models\torch_models\torch_model.py:735:1: W293 blank line contains whitespace
+        """
+        Uses self to make predictions on provided Dataset object.
+    
+        Parameters
+        ----------
+        dataset: dc.data.Dataset
+            Dataset to make prediction on
+        transformers: list of dc.trans.Transformers
+            Transformers that the input data has been transformed by.  The output
+            is passed through these transformers to undo the transformations.
+        output_types: String or list of Strings
+            If specified, all outputs of this type will be retrieved
+            from the model. If output_types is specified, outputs must
+            be None.
+    
+        Returns
+        -------
+        a NumPy array of the model produces a single output, or a list of arrays
+        if it produces multiple outputs
+        """
+^
+deepchem/models\torch_models\torch_model.py:753:1: W293 blank line contains whitespace
+        """
+        Predicts embeddings created by underlying model if any exist.
+        An embedding must be specified to have `output_type` of
+        `'embedding'` in the model definition.
+    
+        Parameters
+        ----------
+        dataset: dc.data.Dataset
+            Dataset to make prediction on
+    
+        Returns
+        -------
+        a NumPy array of the embeddings model produces, or a list
+        of arrays if it produces multiple embeddings
+        """
+^
+deepchem/models\torch_models\torch_model.py:758:1: W293 blank line contains whitespace
+        """
+        Predicts embeddings created by underlying model if any exist.
+        An embedding must be specified to have `output_type` of
+        `'embedding'` in the model definition.
+    
+        Parameters
+        ----------
+        dataset: dc.data.Dataset
+            Dataset to make prediction on
+    
+        Returns
+        -------
+        a NumPy array of the embeddings model produces, or a list
+        of arrays if it produces multiple embeddings
+        """
+^
+deepchem/models\torch_models\torch_model.py:775:1: W293 blank line contains whitespace
+        """
+        Predict the model's outputs, along with the uncertainty in each one.
+    
+        The uncertainty is computed as described in https://arxiv.org/abs/1703.04977.
+        It involves repeating the prediction many times with different dropout masks.
+        The prediction is computed as the average over all the predictions.  The
+        uncertainty includes both the variation among the predicted values (epistemic
+        uncertainty) and the model's own estimates for how well it fits the data
+        (aleatoric uncertainty).  Not all models support uncertainty prediction.
+    
+        Parameters
+        ----------
+        dataset: dc.data.Dataset
+            Dataset to make prediction on
+        masks: int
+            the number of dropout masks to average over
+    
+        Returns
+        -------
+        for each output, a tuple (y_pred, y_std) where y_pred is the predicted
+        value of the output, and each element of y_std estimates the standard
+        deviation of the corresponding element of y_pred
+        """
+^
+deepchem/models\torch_models\torch_model.py:782:1: W293 blank line contains whitespace
+        """
+        Predict the model's outputs, along with the uncertainty in each one.
+    
+        The uncertainty is computed as described in https://arxiv.org/abs/1703.04977.
+        It involves repeating the prediction many times with different dropout masks.
+        The prediction is computed as the average over all the predictions.  The
+        uncertainty includes both the variation among the predicted values (epistemic
+        uncertainty) and the model's own estimates for how well it fits the data
+        (aleatoric uncertainty).  Not all models support uncertainty prediction.
+    
+        Parameters
+        ----------
+        dataset: dc.data.Dataset
+            Dataset to make prediction on
+        masks: int
+            the number of dropout masks to average over
+    
+        Returns
+        -------
+        for each output, a tuple (y_pred, y_std) where y_pred is the predicted
+        value of the output, and each element of y_std estimates the standard
+        deviation of the corresponding element of y_pred
+        """
+^
+deepchem/models\torch_models\torch_model.py:789:1: W293 blank line contains whitespace
+        """
+        Predict the model's outputs, along with the uncertainty in each one.
+    
+        The uncertainty is computed as described in https://arxiv.org/abs/1703.04977.
+        It involves repeating the prediction many times with different dropout masks.
+        The prediction is computed as the average over all the predictions.  The
+        uncertainty includes both the variation among the predicted values (epistemic
+        uncertainty) and the model's own estimates for how well it fits the data
+        (aleatoric uncertainty).  Not all models support uncertainty prediction.
+    
+        Parameters
+        ----------
+        dataset: dc.data.Dataset
+            Dataset to make prediction on
+        masks: int
+            the number of dropout masks to average over
+    
+        Returns
+        -------
+        for each output, a tuple (y_pred, y_std) where y_pred is the predicted
+        value of the output, and each element of y_std estimates the standard
+        deviation of the corresponding element of y_pred
+        """
+^
+deepchem/models\torch_models\torch_model.py:832:1: W293 blank line contains whitespace
+        """Evaluate the performance of this model on the data produced by a generator.
+    
+        Parameters
+        ----------
+        generator: generator
+            this should generate batches, each represented as a tuple of the form
+            (inputs, labels, weights).
+        metric: list of deepchem.metrics.Metric
+            Evaluation metric
+        transformers: list of dc.trans.Transformers
+            Transformers that the input data has been transformed by.  The output
+            is passed through these transformers to undo the transformations.
+        per_task_metrics: bool
+            If True, return per-task scores.
+    
+        Returns
+        -------
+        dict
+            Maps tasks to scores under metric.
+        """
+^
+deepchem/models\torch_models\torch_model.py:845:1: W293 blank line contains whitespace
+        """Evaluate the performance of this model on the data produced by a generator.
+    
+        Parameters
+        ----------
+        generator: generator
+            this should generate batches, each represented as a tuple of the form
+            (inputs, labels, weights).
+        metric: list of deepchem.metrics.Metric
+            Evaluation metric
+        transformers: list of dc.trans.Transformers
+            Transformers that the input data has been transformed by.  The output
+            is passed through these transformers to undo the transformations.
+        per_task_metrics: bool
+            If True, return per-task scores.
+    
+        Returns
+        -------
+        dict
+            Maps tasks to scores under metric.
+        """
+^
+deepchem/models\torch_models\torch_model.py:856:1: W293 blank line contains whitespace
+        """Compute the saliency map for an input sample.
+    
+        This computes the Jacobian matrix with the derivative of each output element
+        with respect to each input element.  More precisely,
+    
+        - If this model has a single output, it returns a matrix of shape
+            (output_shape, input_shape) with the derivatives.
+        - If this model has multiple outputs, it returns a list of matrices, one
+            for each output.
+    
+        This method cannot be used on models that take multiple inputs.
+    
+        Parameters
+        ----------
+        X: ndarray
+            the input data for a single sample
+    
+        Returns
+        -------
+        the Jacobian matrix, or a list of matrices
+        """
+^
+deepchem/models\torch_models\torch_model.py:859:1: W293 blank line contains whitespace
+        """Compute the saliency map for an input sample.
+    
+        This computes the Jacobian matrix with the derivative of each output element
+        with respect to each input element.  More precisely,
+    
+        - If this model has a single output, it returns a matrix of shape
+            (output_shape, input_shape) with the derivatives.
+        - If this model has multiple outputs, it returns a list of matrices, one
+            for each output.
+    
+        This method cannot be used on models that take multiple inputs.
+    
+        Parameters
+        ----------
+        X: ndarray
+            the input data for a single sample
+    
+        Returns
+        -------
+        the Jacobian matrix, or a list of matrices
+        """
+^
+deepchem/models\torch_models\torch_model.py:864:1: W293 blank line contains whitespace
+        """Compute the saliency map for an input sample.
+    
+        This computes the Jacobian matrix with the derivative of each output element
+        with respect to each input element.  More precisely,
+    
+        - If this model has a single output, it returns a matrix of shape
+            (output_shape, input_shape) with the derivatives.
+        - If this model has multiple outputs, it returns a list of matrices, one
+            for each output.
+    
+        This method cannot be used on models that take multiple inputs.
+    
+        Parameters
+        ----------
+        X: ndarray
+            the input data for a single sample
+    
+        Returns
+        -------
+        the Jacobian matrix, or a list of matrices
+        """
+^
+deepchem/models\torch_models\torch_model.py:866:1: W293 blank line contains whitespace
+        """Compute the saliency map for an input sample.
+    
+        This computes the Jacobian matrix with the derivative of each output element
+        with respect to each input element.  More precisely,
+    
+        - If this model has a single output, it returns a matrix of shape
+            (output_shape, input_shape) with the derivatives.
+        - If this model has multiple outputs, it returns a list of matrices, one
+            for each output.
+    
+        This method cannot be used on models that take multiple inputs.
+    
+        Parameters
+        ----------
+        X: ndarray
+            the input data for a single sample
+    
+        Returns
+        -------
+        the Jacobian matrix, or a list of matrices
+        """
+^
+deepchem/models\torch_models\torch_model.py:871:1: W293 blank line contains whitespace
+        """Compute the saliency map for an input sample.
+    
+        This computes the Jacobian matrix with the derivative of each output element
+        with respect to each input element.  More precisely,
+    
+        - If this model has a single output, it returns a matrix of shape
+            (output_shape, input_shape) with the derivatives.
+        - If this model has multiple outputs, it returns a list of matrices, one
+            for each output.
+    
+        This method cannot be used on models that take multiple inputs.
+    
+        Parameters
+        ----------
+        X: ndarray
+            the input data for a single sample
+    
+        Returns
+        -------
+        the Jacobian matrix, or a list of matrices
+        """
+^
+deepchem/models\torch_models\torch_model.py:946:1: W293 blank line contains whitespace
+        """Create a generator that iterates batches for a dataset.
+    
+        Subclasses may override this method to customize how model inputs are
+        generated from the data.
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            the data to iterate
+        epochs: int
+            the number of times to iterate over the full dataset
+        mode: str
+            allowed values are 'fit' (called during training), 'predict' (called
+            during prediction), and 'uncertainty' (called during uncertainty
+            prediction)
+        deterministic: bool
+            whether to iterate over the dataset in order, or randomly shuffle the
+            data for each epoch
+        pad_batches: bool
+            whether to pad each batch up to this model's preferred batch size
+    
+        Returns
+        -------
+        a generator that iterates batches, each represented as a tuple of lists:
+        ([inputs], [outputs], [weights])
+        """
+^
+deepchem/models\torch_models\torch_model.py:949:1: W293 blank line contains whitespace
+        """Create a generator that iterates batches for a dataset.
+    
+        Subclasses may override this method to customize how model inputs are
+        generated from the data.
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            the data to iterate
+        epochs: int
+            the number of times to iterate over the full dataset
+        mode: str
+            allowed values are 'fit' (called during training), 'predict' (called
+            during prediction), and 'uncertainty' (called during uncertainty
+            prediction)
+        deterministic: bool
+            whether to iterate over the dataset in order, or randomly shuffle the
+            data for each epoch
+        pad_batches: bool
+            whether to pad each batch up to this model's preferred batch size
+    
+        Returns
+        -------
+        a generator that iterates batches, each represented as a tuple of lists:
+        ([inputs], [outputs], [weights])
+        """
+^
+deepchem/models\torch_models\torch_model.py:965:1: W293 blank line contains whitespace
+        """Create a generator that iterates batches for a dataset.
+    
+        Subclasses may override this method to customize how model inputs are
+        generated from the data.
+    
+        Parameters
+        ----------
+        dataset: Dataset
+            the data to iterate
+        epochs: int
+            the number of times to iterate over the full dataset
+        mode: str
+            allowed values are 'fit' (called during training), 'predict' (called
+            during prediction), and 'uncertainty' (called during uncertainty
+            prediction)
+        deterministic: bool
+            whether to iterate over the dataset in order, or randomly shuffle the
+            data for each epoch
+        pad_batches: bool
+            whether to pad each batch up to this model's preferred batch size
+    
+        Returns
+        -------
+        a generator that iterates batches, each represented as a tuple of lists:
+        ([inputs], [outputs], [weights])
+        """
+^
+deepchem/models\torch_models\torch_model.py:982:1: W293 blank line contains whitespace
+        """Save a checkpoint to disk.
+    
+        Usually you do not need to call this method, since fit() saves checkpoints
+        automatically.  If you have disabled automatic checkpointing during fitting,
+        this can be called to manually write checkpoints.
+    
+        Parameters
+        ----------
+        max_checkpoints_to_keep: int
+            the maximum number of checkpoints to keep.  Older checkpoints are discarded.
+        model_dir: str, default None
+            Model directory to save checkpoint to. If None, revert to self.model_dir
+        """
+^
+deepchem/models\torch_models\torch_model.py:986:1: W293 blank line contains whitespace
+        """Save a checkpoint to disk.
+    
+        Usually you do not need to call this method, since fit() saves checkpoints
+        automatically.  If you have disabled automatic checkpointing during fitting,
+        this can be called to manually write checkpoints.
+    
+        Parameters
+        ----------
+        max_checkpoints_to_keep: int
+            the maximum number of checkpoints to keep.  Older checkpoints are discarded.
+        model_dir: str, default None
+            Model directory to save checkpoint to. If None, revert to self.model_dir
+        """
+^
+deepchem/models\torch_models\torch_model.py:1025:1: W293 blank line contains whitespace
+        """Get a list of all available checkpoint files.
+    
+        Parameters
+        ----------
+        model_dir: str, default None
+            Directory to get list of checkpoints from. Reverts to self.model_dir if None
+    
+        """
+^
+deepchem/models\torch_models\torch_model.py:1030:1: W293 blank line contains whitespace
+        """Get a list of all available checkpoint files.
+    
+        Parameters
+        ----------
+        model_dir: str, default None
+            Directory to get list of checkpoints from. Reverts to self.model_dir if None
+    
+        """
+^
+deepchem/models\torch_models\torch_model.py:1044:1: W293 blank line contains whitespace
+        """Reload the values of all variables from a checkpoint file.
+    
+        Parameters
+        ----------
+        checkpoint: str
+            the path to the checkpoint file to load.  If this is None, the most recent
+            checkpoint will be chosen automatically.  Call get_checkpoints() to get a
+            list of all available checkpoints.
+        model_dir: str, default None
+            Directory to restore checkpoint from. If None, use self.model_dir.  If
+            checkpoint is not None, this is ignored.
+        """
+^
+deepchem/models\torch_models\torch_model.py:1085:1: W293 blank line contains whitespace
+        """
+        Creates a default assignment map between parameters of source and current model.
+        This is used only when a custom assignment map is missing. This assumes the
+        model is made of different layers followed by a dense layer for mapping to
+        output tasks. include_top is used to control whether or not the final dense
+        layer is used. The default assignment map is useful in cases where the type
+        of task is different (classification vs regression) and/or number of tasks.
+    
+        Parameters
+        ----------
+        source_model: dc.models.TorchModel
+            Source model to copy parameter values from.
+        include_top: bool, default True
+            if true, copies the last dense layer
+        """
+^
+deepchem/models\torch_models\torch_model.py:1112:1: W293 blank line contains whitespace
+        """
+        Creates a value map between parameters in the source model and their
+        current values. This is used only when a custom value map is missing, and
+        assumes the restore method has been called.
+    
+        Parameters
+        ----------
+        source_model: dc.models.TorchModel
+            Source model to create value map from
+        """
+^
+deepchem/models\torch_models\torch_model.py:1146:1: W293 blank line contains whitespace
+        """Copies parameter values from a pretrained model. `source_model` can either
+        be a pretrained model or a model with the same architecture. `value_map`
+        is a parameter-value dictionary. If no `value_map` is provided, the parameter
+        values are restored to the `source_model` from a checkpoint and a default
+        `value_map` is created. `assignment_map` is a dictionary mapping parameters
+        from the `source_model` to the current model. If no `assignment_map` is
+        provided, one is made from scratch and assumes the model is composed of
+        several different layers, with the final one being a dense layer. include_top
+        is used to control whether or not the final dense layer is used. The default
+        assignment map is useful in cases where the type of task is different
+        (classification vs regression) and/or number of tasks in the setting.
+    
+        Parameters
+        ----------
+        source_model: dc.TorchModel, required
+            source_model can either be the pretrained model or a dc.TorchModel with
+            the same architecture as the pretrained model. It is used to restore from
+            a checkpoint, if value_map is None and to create a default assignment map
+            if assignment_map is None
+        assignment_map: Dict, default None
+            Dictionary mapping the source_model parameters and current model parameters
+        value_map: Dict, default None
+            Dictionary containing source_model trainable parameters mapped to numpy
+            arrays. If value_map is None, the values are restored and a default
+            parameter map is created using the restored values
+        checkpoint: str, default None
+            the path to the checkpoint file to load.  If this is None, the most recent
+            checkpoint will be chosen automatically.  Call get_checkpoints() to get a
+            list of all available checkpoints
+        model_dir: str, default None
+            Restore model from custom model directory if needed
+        include_top: bool, default True
+            if True, copies the weights and bias associated with the final dense
+            layer. Used only when assignment map is None
+        inputs: List, input tensors for model
+            if not None, then the weights are built for both the source and self.
+        """
+^
+1     E231 missing whitespace after ','
+1     E262 inline comment should start with '# '
+7     E265 block comment should start with '# '
+4     E266 too many leading '#' for block comment
+2     E402 module level import not at top of file
+1     E501 line too long (301 > 300 characters)
+1     E711 comparison to None should be 'if cond is None:'
+1     E712 comparison to True should be 'if cond is True:' or 'if cond:'
+8     E731 do not assign a lambda expression, use a def
+120   F401 'logging' imported but unused
+14    F811 redefinition of unused 'dc' from line 2
+1     F821 undefined name 'warnings'
+56    F841 local variable 'N_pairs' is assigned to but never used
+15    W291 trailing whitespace
+138   W293 blank line contains whitespace
+370
