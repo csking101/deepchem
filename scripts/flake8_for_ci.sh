@@ -13,6 +13,7 @@ items=(
     "deepchem/trans"
     "deepchem/utils"
     "deepchem/molnet"
+    "deepchem/models"
 )
 
 for item in "${items[@]}" ; do
